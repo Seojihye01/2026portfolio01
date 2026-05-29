@@ -1,0 +1,50 @@
+.main7_section {width: 100%; height: 100vh; background-color: #e0e0e0; display: flex; justify-content: center;
+                align-items: center; color: #121212; box-sizing: border-box;}
+
+.main7_track_container {display: flex; flex-direction: column; width: 100%; max-width: 631px; cursor: pointer;
+                        transition: opacity 0.3s ease; padding: 0 40px; margin: 0 auto; position: relative;}
+
+.main7_title, .main7_project_name {font-size: 40px; font-weight: 700; margin: 0; letter-spacing: 1px;
+                                   line-height: 1; text-transform: uppercase;}
+
+.main7_row_1 {width: 100%; display: flex; justify-content: flex-start;}
+
+.main7_row_2 {width: 100%; display: flex; align-items: flex-start; margin-top: 25px; justify-content: space-between;}
+
+.runtime_block {margin: 10px 0 0 2.5px; flex-shrink: 0; display: flex; flex-direction: row;}
+
+.main7_project_name {margin-left: 0px;}
+
+.main7_row_3 {width: 100%; display: flex; padding-left: 235px; margin-top: 24px;}
+
+.main7_meta_block {display: flex; flex-direction: column; gap: 6px;}
+
+.main7_meta_label {font-size: 0.68rem; font-weight: 400; color: #7A7A7C; letter-spacing: 0.03em;}
+
+.main7_meta_value {font-size: 13px; font-weight: 500; letter-spacing: -0.01em; color: #121212;}
+
+.timer_font {font-family: 'Courier New', Courier, monospace; font-weight: 600; margin-left: 10px;
+             font-size: 13.5px;}
+
+/* Responsive Design */
+/* 1. 모바일(768px 이하) */
+@media (max-width: 768px) {
+
+  .main7_track_container {padding: 0 40px; left: 60px;}
+  
+  .main7_row_2 {flex-direction: column; gap: 20px;}
+
+  .main7_title, .main7_project_name {margin-left: 0; font-size: 30px;}
+
+  .main7_project_name {margin-left: 117px;}
+
+  .main7_row_3 {padding-left: 90px;}
+
+}
+
+/* 2. 소형 모바일(600px 이하) */
+@media (max-width: 600px) {
+
+  .main7_track_container {padding: 0 40px; left: 10px;}
+
+}
