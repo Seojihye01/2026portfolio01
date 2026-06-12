@@ -7,6 +7,7 @@ import Main_6 from './Main_6';
 import Main_7 from './Main_7';
 import Main_8 from './Main_8';
 import Main_9 from './Main_9';
+import Main_10 from './Main_10';
 
 
 
@@ -18,11 +19,12 @@ const Main_wrapper =() => {
         <div id='slogan'><Main_2/></div>
         <div id='profile'><Main_3/></div>
         <div id='proj1'><Main_4/></div>
-        <div id='visual'><Main_5/></div>
-        <div id='logic'><Main_6/></div>
-        <div id='live'><Main_7 url="https://github.com" /></div>
-        <div id='proj2'><Main_8/></div>
-        <div id='finish'><Main_9/></div>
+        <div id='strategy'><Main_5/></div>
+        <div id='visual'><Main_6/></div>
+        <div id='live'><Main_7 url="https://github.com"/></div>
+        <div id='logic'><Main_8/></div>
+        <div id='proj2'><Main_9/></div>
+        <div id='finish'><Main_10/></div>
  
         </div>
     );

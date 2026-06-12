@@ -1,4 +1,4 @@
-.main2_container {width: 100%; padding: 120px 0; background-size: cover; color: rgba(249, 249, 249, 0.95); height: 100vh;
+.main2_container {width: 100%; padding: 80px 0; background-size: cover; color: rgba(249, 249, 249, 0.95); height: 100vh;
                   background-position: center; display: flex; justify-content: center; align-items: center; 
                   background: url("/media/hero.png") no-repeat center/cover; filter: brightness(1.05); box-sizing: border-box;}
 

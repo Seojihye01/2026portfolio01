@@ -25,7 +25,7 @@ const Main_1: React.FC = () => {
               <p className="meta_geo_text">LAT / LONG : 37.5706° N, 126.9853° E</p>
               <h3 className="meta_location">BASED IN SEOUL</h3>
             </div>
-            <p className="meta_date">MAY 28, 2026</p>
+            <p className="meta_date">JUNE 07, 2026</p>
           </div>
         </div>
       </div>

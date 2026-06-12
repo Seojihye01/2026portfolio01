@@ -1,135 +1,88 @@
-import { useState } from 'react';
+import React from 'react';
 import './Main_6.css';
 
-interface TrackContent {
-  id: string;
-  trackNum: string;
-  menuTitle: string;
-  subTitle: string;
-  videoSrc: string; // 이미지에서 고품질 시네마틱 비디오 경로로 변경
-  logics: string[];
-}
+const Main_6: React.FC = () => {
+  const colors = [
+    { code: '#121212', char: 'Cinematic Contrast', name: 'GRAPHITE', className: 'main6_bg_graphite' },
+    { code: '#F9F9F9', char: 'Cinematic Contrast', name: 'CLOUD WHITE', className: 'main6_bg_white' },
+    { code: '#999999', char: 'Neutral Balance', name: 'PLATINUM GREY', className: 'main6_bg_grey' },
+    { code: '#1090BF', char: 'Visual Anchor', name: 'OCEAN BLUE', className: 'main6_bg_blue' },
+  ];
 
-const TRACK_DATA: TrackContent[] = [
-  {
-    id: 'track01',
-    trackNum: 'TRACK 01',
-    menuTitle: 'MAIN_SECTION : CURATION INTRODUCTION',
-    subTitle: 'Curation Introduction',
-    videoSrc: '/media/dune.mp4', // mp4 포맷 매핑
-    logics: [
-      'Puzzle-driven User Engagement',
-      'Interactive CTA via Tactile Piece Matching',
-      'Personalised Discovery Through Selective Matching'
-    ]
-  },
-  {
-    id: 'track02',
-    trackNum: 'TRACK 02',
-    menuTitle: 'CURATION_SECTION : EMBLEM',
-    subTitle: 'Emblem Archive',
-    videoSrc: '/media/camera_set.mp4',
-    logics: [
-      'Interactive Vault for Cinematic Symbols',
-      'Click-to-Open Drawer Mechanism',
-      'Curiosity-Driven Exploration Through Hidden Objects'
-    ]
-  },
-  {
-    id: 'track03',
-    trackNum: 'TRACK 03',
-    menuTitle: 'EXPLORE_SECTION : EXHIBITION',
-    subTitle: 'Theme Exhibition',
-    videoSrc: '/media/director.mp4',
-    logics: [
-      'Monthly Themed Concept Exploration',
-      'Full-Screen Exhibition Layout',
-      'Concept-First Framing for Narrative Immersion'
-    ]
-  },
-  {
-    id: 'track04',
-    trackNum: 'TRACK 04',
-    menuTitle: 'FUNDING_SECTION : #TAKE01',
-    subTitle: "Director's Slate",
-    videoSrc: '/media/camera.mp4',
-    logics: [
-      'Clapper Board Concept / Scroll-Lock Trap',
-      'Custom Cursor Countdown & Action Trigger',
-      'Audience Participation Through Cinematic Interaction'
-    ]
-  }
-];
-
-const Main_6 = () => {
-  const [activeTab, setActiveTab] = useState<number>(0);
-  const currentTrack = TRACK_DATA[activeTab];
+  const weights = ['light', 'regular', 'medium', 'semibold', 'bold', 'extrabold', 'black'];
 
   return (
-    <section className="tr_container" data-theme="light">
-      {/* 1. LEFT SIDEBAR : 기획 논리 & 대형 트랙 인디케이터 */}
-      <div className="tr_sidebar">
-        <div className="tr_logic_block">
-          <span className="tr_mini_label">EXPERIENCE FLOW</span>
-          <span className="tr_mini_label cp">DIRECTORY.M</span>
-          <div className="tr_logic_list">
-            {currentTrack.logics.map((text, idx) => (
-              <p key={idx} className="tr_logic_item" style={{ animationDelay: `${idx * 0.15}s` }}>
-                {text}
-              </p>
+    <section className="main6_container" data-theme="light">
+      <div className="main6_inner">
+        
+        <div className="main6_left_zone">
+          <div className="main6_lane_wrapper">
+            {colors.map((color, idx) => (
+              <div key={idx} className="main6_label_card">
+                <div className="main6_chip_box">
+                  <div className={`main6_colour_square ${color.className}`} />
+                  <span className="main6_colour_code">{color.code}</span>
+                </div>
+              
+                <div className="main6_vertical_text_zone">
+                  <span className="main6_colour_char">{color.char}</span>
+                  <h3 className={`main6_colour_name ${color.className === 'main6_bg_blue' ? 'colour_blue' : ''}`}>
+                    {color.name}
+                  </h3>
+                </div>
+
+                <div className="main6_zigzag_zone">
+                  <svg className="main6_zigzag_svg" viewBox="0 0 40 24">
+                    <path d="M0,5 L6,11 L12,5 L18,11 L24,5 L30,11 L36,5 L42,11" fill="none" stroke="currentColor" strokeWidth="1" />
+                    <path d="M0,9 L6,15 L12,9 L18,15 L24,9 L30,15 L36,9 L42,15" fill="none" stroke="currentColor" strokeWidth="1" />
+                    <path d="M0,13 L6,19 L12,13 L18,19 L24,13 L30,19 L36,13 L42,19" fill="none" stroke="currentColor" strokeWidth="1" />
+                    <path d="M0,17 L6,23 L12,17 L18,23 L24,17 L30,23 L36,17 L42,23" fill="none" stroke="currentColor" strokeWidth="1" />
+                  </svg>
+                </div>
+              </div>
             ))}
           </div>
         </div>
 
-        {/* 데스크톱/태블릿 전용 가로 구분선 */}
-        <div className="tr_center_line"></div>
+        <div className="main6_right_zone">
+          
+          <header className="main6_header">
+            <h2 className="main6_main_title">VISUAL KIT SPEC</h2>
+            <span className="main6_sub_title">[ TYPOGRAPHY / CHROMATIC CODE OF DIRECTORY.M ]</span>
+          </header>
 
-        <div className="tr_big_number">
-          <h1>{currentTrack.trackNum}</h1>
-        </div>
-      </div>
+          <div className="main6_typo_wrapper">
+            {/* Card 1: MONTSERRAT */}
+            <div className="main6_typo_card font_montserrat">
+              <div className="main6_card_body">
+                <span className="main6_font_family_vertical">ENG / SAN SERIF</span>
+                <h2 className="main6_font_main_print">MONTSERRAT</h2>
+                <p className="main6_font_reason">Geometric Impact / Editorial Scale / Visual Weight</p>
+              </div>
+              <div className="main6_weight_stack">
+                {weights.map((w, idx) => (
+                  <span key={idx} className={`main6_stack_line w_${w}`}>MONTSERRAT</span>
+                ))}
+              </div>
+            </div>
 
-      {/* 2. CENTER FIELD : 3줄 육상 트랙 라인 구간 (모바일에서 위치 유동적 조정됨) */}
-      <div className="tr_center_tracks">
-        <div className="tr_lane"></div>
-      </div>
-
-      {/* 3. RIGHT CONTENT : 시네마틱 비디오 포맷 뷰포트 + 대시보드 */}
-      <div className="tr_content_zone">
-        <div className="tr_image_viewport">
-          <div className="tr_view_header">
-            <span className="tr_view_title">PREVIEW_MODE : {currentTrack.trackNum}</span>
+            {/* Card 2: PRETENDARD */}
+            <div className="main6_typo_card font_pretendard">
+              <div className="main6_card_body">
+                <span className="main6_font_family_vertical">KOR / SAN SERIF</span>
+                <h2 className="main6_font_main_print">PRETENDARD</h2>
+                <p className="main6_font_reason">High Legibility / UI Optimization / Seamless Harmony</p>
+              </div>
+              <div className="main6_weight_stack">
+                {weights.map((w, idx) => (
+                  <span key={idx} className={`main5_stack_line w_${w}`}>PRETENDARD</span>
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="tr_mockup_body">
-            <video
-              key={currentTrack.id} // 탭 전환 시 비디오 객체를 새로 마운트하여 자연스럽게 재생 유도
-              src={currentTrack.videoSrc}
-              className="tr_screen_video"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
-          </div>
+
         </div>
 
-        {/* 하단 네비게이션 대시보드 */}
-        <div className="tr_menu_dashboard">
-          <div className="tr_menu_list">
-            {TRACK_DATA.map((track, index) => {
-              const isActive = index === activeTab;
-              return (
-                <button
-                  key={track.id}
-                  className={`tr_menu_btn ${isActive ? 'is_active' : 'is_inactive'}`}
-                  onClick={() => setActiveTab(index)}
-                >
-                  <span className="tr_btn_title">{track.menuTitle}</span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
       </div>
     </section>
   );

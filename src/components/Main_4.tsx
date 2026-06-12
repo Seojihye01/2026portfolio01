@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import './Main_4.css';
 
 const Main_4: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.log("Muted autoplay initiated:", error);
+        if (videoRef.current) {
+          videoRef.current.muted = true;
+          videoRef.current.play();
+        }
+      });
+    }
+  }, []);
+
   return (
     <article className="main4_container" data-theme="light">
       <header className="main4_sub_header">
@@ -9,7 +23,7 @@ const Main_4: React.FC = () => {
           <span className="main4_sub_label">Distance : Full Course</span>
           <div className='main4_sub_set'>
             <p className="main4_sub_tag bold">Personal Project</p>
-            <p className="main4_sub_tag">Web Development / UX UI Design / Branding</p>
+            <p className="main4_sub_tag">Web Publishing / UX UI Design / Branding</p>
           </div>
         </div>
          <div className="main4_title_section">
@@ -23,7 +37,11 @@ const Main_4: React.FC = () => {
       </div>
 
       <div className="main4_hero_visual_bar">
-        <div className="main4_hero_placeholder_text">DIRECTORY.M</div>
+        <div className="main4_video_container">
+          <video
+            ref={videoRef}
+            className="main4_background_video" src="/media/main_proj.mp4" autoPlay muted loop playsInline />
+        </div>
       </div>
 
       <hr className="main4_section_divider" />

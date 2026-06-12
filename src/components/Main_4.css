@@ -19,12 +19,15 @@
 
 .text_bold {font-size: 15px; font-weight: 500;}
 
-.main4_hero_visual_bar {width: 100%; height: 160px; background-image: url(/media/hero.png);
-                        margin: 15px 0 35px 0; display: flex; justify-content: center;
-                        align-items: center; position: relative; overflow: hidden;}
+.main4_hero_visual_bar {width: 100%; height: 160px; background: #000; margin: 15px 0 35px 0; display: flex; 
+                        justify-content: center; align-items: center; position: relative; overflow: hidden;
+                        box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);}
 
-.main4_hero_placeholder_text {font-size: 15px; font-weight: 600; letter-spacing: 0.15em;
-                              color: rgba(255, 255, 255, 0.35);}
+.main4_video_container {position: absolute; top: 0; left: 0; width: 100%; height: 110%; z-index: 1; 
+                        transform: translateX(1px);}
+
+.main4_background_video {width: 100%; height: 100%; object-fit: cover; object-position: center center; 
+                         display: block;}
 
 .main4_section_divider {border: none; border-top: 1px solid rgba(18, 18, 18, 0.15); margin-bottom: 45px;}
 
@@ -82,6 +85,8 @@
   .text_bold {font-size: 13px;}
 
   .main4_hero_visual_bar {height: 120px; margin: 10px 0 24px 0;}
+
+  .main4_background_video {object-fit: cover;}
 
   .main4_section_divider {margin-bottom: 24px;}
 

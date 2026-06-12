@@ -1,86 +1,113 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main_5.css';
 
-const Main_5: React.FC = () => {
-  const colors = [
-    { code: '#121212', char: 'Cinematic Contrast', name: 'GRAPHITE', className: 'main5_bg_graphite' },
-    { code: '#F9F9F9', char: 'Cinematic Contrast', name: 'CLOUD WHITE', className: 'main5_bg_white' },
-    { code: '#999999', char: 'Neutral Balance', name: 'PLATINUM GREY', className: 'main5_bg_grey' },
-    { code: '#1090BF', char: 'Visual Anchor', name: 'OCEAN BLUE', className: 'main5_bg_blue' },
-  ];
 
-  const weights = ['light', 'regular', 'medium', 'semibold', 'bold', 'extrabold', 'black'];
+interface StrategyItem {
+  id: string;
+  title: string;
+  content: string;
+}
+
+
+
+interface StrategyData {
+  PROBLEM: StrategyItem;
+  RESEARCH: StrategyItem;
+  HYPOTHESIS: StrategyItem;
+  SOLUTION: StrategyItem;
+  KEY_INSIGHT: StrategyItem;
+}
+
+
+const Main_5: React.FC = () => {
+  const [lang, setLang] = useState<'KOR' | 'ENG'>('ENG');
+  const [activeTab, setActiveTab] = useState<keyof StrategyData>('PROBLEM');
+
+  const koData: StrategyData = {
+    PROBLEM: { id: '01', title: 'PROBLEM', content: '기존 OTT 플랫폼의 무한 스크롤과 자극적인 썸네일 나열식 배치로 인한 콘텐츠 선택 장애 유발 및 이용자의 시각적 피로도 심화' },
+    RESEARCH: { id: '02', title: 'RESEARCH', content: '콘텐츠 탐색 피로도로 인해 실제 시청보다 탐색에 더 많은 시간을 허비하는 ‘넷플릭스 증후군’ 현상 <br /><span class="main5_research_source">글로벌 소비자의 60%가 OTT 검색 과정에서 좌절을 느끼며, 44%는 매번 6분 이상을 허비 <br/>[ Accenture Report ]</span>' },
+    HYPOTHESIS: { id: '03', title: 'HYPOTHESIS', content: '영화의 본질적인 감성과 기획 의도를 매거진 형태의 UI로 정제하여 전달한다면 이용자의 탐색 피로도를 낮추고 플랫폼 몰입도를 증대시킬 것이다' },
+    SOLUTION: { id: '04', title: 'SOLUTION', content: '이용자가 제안된 콘텐츠를 주도적으로 발견하는 즐거움을 느낄 수 있도록 단계별 인터랙티브 플로우를 설계하고 능동적 참여를 통해 결과물에 대한 소유감 부여' },
+    KEY_INSIGHT: { id: '05', title: 'KEY INSIGHT', content: '반응형 UX는 기획단계에서부터 컴포넌트의 가변성과 미디어의 고유 특성을 미리 계산하고 방어하는 설계 역량에서 나온다는 것을 학습' }
+  };
+
+  const enData: StrategyData = {
+    PROBLEM: { id: '01', title: 'PROBLEM', content: 'The paradox of choice and visual fatigue aggravated by endless scrolling and hyper-stimulating thumbnail-driven layouts on conventional OTT platforms' },
+    RESEARCH: { id: '02', title: 'RESEARCH', content: 'Netflix Syndrome : A modern decision-fatigue phenomenon where viewers spend more time browsing than actually enjoying content <br/> <span class="main5_research_source">60% of global consumers consider navigating between OTT services frustrating, with 44% spending over 6 minutes just to find content <br/>[ Accenture, "Streaming’s Next Act" ]</span>' },
+    HYPOTHESIS: { id: '03', title: 'HYPOTHESIS', content: 'If we filter out digital noise and present the core aesthetic of cinema through a text-driven, minimal editorial UI, It will minimise visual fatigue and deepen user engagement' },
+    SOLUTION: { id: '04', title: 'SOLUTION', content: 'Designing a step-by-step interactive flow that empowers users to proactively discover recommended content, fostering a sense of ownership over the results through active engagement' },
+    KEY_INSIGHT: { id: '05', title: 'KEY INSIGHT', content: 'Responsive UX is not merely downscaling a completed layout; It stems from the engineering capability to proactively calculate component fluidity and media specifications right from the conceptual phase' }
+  };
+
+  const currentData = lang === 'KOR' ? koData : enData;
+  const currentItem = currentData[activeTab];
+
 
   return (
-    <section className="main5_container" data-theme="light">
-      <div className="main5_inner">
+    <section className="main5_strategy_section"  data-theme="dark">
+      <div className="main5_strategy_container"> 
         
-        <div className="main5_left_zone">
-          <div className="main5_lane_wrapper">
-            {colors.map((color, idx) => (
-              <div key={idx} className="main5_label_card">
-                <div className="main5_chip_box">
-                  <div className={`main5_color_square ${color.className}`} />
-                  <span className="main5_color_code">{color.code}</span>
-                </div>
-              
-                <div className="main5_vertical_text_zone">
-                  <span className="main5_color_char">{color.char}</span>
-                  <h3 className={`main5_color_name ${color.className === 'main5_bg_blue' ? 'color_blue' : ''}`}>
-                    {color.name}
-                  </h3>
-                </div>
-
-                <div className="main5_zigzag_zone">
-                  <svg className="main5_zigzag_svg" viewBox="0 0 40 24">
-                    <path d="M0,5 L6,11 L12,5 L18,11 L24,5 L30,11 L36,5 L42,11" fill="none" stroke="currentColor" strokeWidth="1" />
-                    <path d="M0,9 L6,15 L12,9 L18,15 L24,9 L30,15 L36,9 L42,15" fill="none" stroke="currentColor" strokeWidth="1" />
-                    <path d="M0,13 L6,19 L12,13 L18,19 L24,13 L30,19 L36,13 L42,19" fill="none" stroke="currentColor" strokeWidth="1" />
-                    <path d="M0,17 L6,23 L12,17 L18,23 L24,17 L30,23 L36,17 L42,23" fill="none" stroke="currentColor" strokeWidth="1" />
-                  </svg>
-                </div>
-              </div>
-            ))}
+        <div className="main5_editorial_header">
+          
+          <div className="main5_header_top_bar">
+            <p className="main5_header_identity">
+              Directory.M | Premium Cinematic Curation Platform
+            </p>
           </div>
+
+          <div className="main5_header_main_grid">
+            
+            <nav className="main5_vertical_nav">
+              {Object.keys(currentData).map((key) => {
+                const tabKey = key as keyof StrategyData;
+                const isSelected = activeTab === tabKey;
+                return (
+                  <button
+                    key={tabKey}
+                    type="button"
+                    className={`main5_nav_row_btn ${isSelected ? 'is_active' : ''}`}
+                    onClick={() => setActiveTab(tabKey)}
+                  >
+                    <span className="main5_nav_id">{currentData[tabKey].id}</span>
+                    <span className="main5_nav_title">{currentData[tabKey].title}</span>
+                  </button>
+                );
+              })}
+            </nav>
+
+            <div className="main5_title_zone">
+              <h2 className="main5_strategy_title">MAIN RACE STRATEGY</h2>
+            </div>
+          </div>
+
+          <div className="main5_header_footer">
+            <div className="main5_lang_toggle">
+              <button
+                type="button"
+                className={`main5_lang_btn ${lang === 'ENG' ? 'is_active' : ''}`}
+                onClick={() => setLang('ENG')}
+              >
+                ENG
+              </button>
+              <span className="main5_lang_divider">/</span>
+              <button
+                type="button"
+                className={`main5_lang_btn ${lang === 'KOR' ? 'is_active' : ''}`}
+                onClick={() => setLang('KOR')}
+              >
+                KOR
+              </button>
+            </div>
+          </div>
+
         </div>
 
-        <div className="main5_right_zone">
-          
-          <header className="main5_header">
-            <h2 className="main5_main_title">VISUAL KIT SPEC</h2>
-            <span className="main5_sub_title">[ TYPOGRAPHY / CHROMATIC CODE OF DIRECTORY.M ]</span>
-          </header>
-
-          <div className="main5_typo_wrapper">
-            {/* Card 1: MONTSERRAT */}
-            <div className="main5_typo_card font_montserrat">
-              <div className="main5_card_body">
-                <span className="main5_font_family_vertical">ENG / SAN SERIF</span>
-                <h2 className="main5_font_main_print">MONTSERRAT</h2>
-                <p className="main5_font_reason">Geometric Impact / Editorial Scale / Visual Weight</p>
-              </div>
-              <div className="main5_weight_stack">
-                {weights.map((w, idx) => (
-                  <span key={idx} className={`main5_stack_line w_${w}`}>MONTSERRAT</span>
-                ))}
-              </div>
-            </div>
-
-            {/* Card 2: PRETENDARD */}
-            <div className="main5_typo_card font_pretendard">
-              <div className="main5_card_body">
-                <span className="main5_font_family_vertical">KOR / SAN SERIF</span>
-                <h2 className="main5_font_main_print">PRETENDARD</h2>
-                <p className="main5_font_reason">High Legibility / UI Optimization / Seamless Harmony</p>
-              </div>
-              <div className="main5_weight_stack">
-                {weights.map((w, idx) => (
-                  <span key={idx} className={`main5_stack_line w_${w}`}>PRETENDARD</span>
-                ))}
-              </div>
+        <div className="main5_split_layout">
+          <div className="main5_content_side">
+            <div className="main5_detail_body">
+              <p dangerouslySetInnerHTML={{ __html: currentItem.content }} />
             </div>
           </div>
-
         </div>
 
       </div>

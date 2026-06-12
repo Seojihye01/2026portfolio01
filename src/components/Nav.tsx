@@ -10,15 +10,16 @@ const Nav = ({ isMenuOpen }: NavProps) => {
     const [isDarkSection, setIsDarkSection] = useState(true); // 기본값은 어두운 배경(흰색 아이콘)
     if (isMenuOpen) return null;
     const sections = [
-        { id: 'start', label: 'START LINE' },
-        { id: 'slogan', label: 'SLOGAN' },
-        { id: 'profile', label: 'RUNNER PROFILE' },
-        { id: 'proj1', label: 'MAIN RACE' },
-        { id: 'visual', label: 'VISUAL KIT' },
-        { id: 'logic', label: 'EXPERIENCE FLOW' },
-        { id: 'live', label: 'LIVE RUN' },
-        { id: 'proj2', label: 'SUB RACE' },
-        { id: 'finish', label: 'FINISH LINE' }
+        { id: 'start', label: '01 | START LINE' },
+        { id: 'slogan', label: '02 | SLOGAN' },
+        { id: 'profile', label: '03 | RUNNER PROFILE' },
+        { id: 'proj1', label: '04 | MAIN RACE' },
+        { id: 'strategy', label: '05 | RACE STRATEGY' },
+        { id: 'visual', label: '06 | VISUAL KIT' },
+        { id: 'live', label: '07 | LIVE RUN' },
+        { id: 'logic', label: '08 | EXPERIENCE FLOW' },
+        { id: 'proj2', label: '09 | SUB RACE' },
+        { id: 'finish', label: '10 | FINISH LINE' }
     ];
 
     useEffect(() => {
@@ -35,7 +36,7 @@ const Nav = ({ isMenuOpen }: NavProps) => {
             { threshold: 0.5 } // 섹션이 절반 이상 보일 때 변경
         );
 
-        const sectionElements = document.querySelectorAll('[data-theme], #start, #slogan, #profile, #proj1, #visual, #logic, #live, #proj2, #finish');
+        const sectionElements = document.querySelectorAll('[data-theme], #start, #slogan, #profile, #proj1, #strategy, #visual, #logic, #live, #proj2, #finish');
         sectionElements.forEach((el) => observer.observe(el));
 
         return () => observer.disconnect();
