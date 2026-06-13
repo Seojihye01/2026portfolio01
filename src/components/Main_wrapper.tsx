@@ -21,7 +21,7 @@ const Main_wrapper =() => {
         <div id='proj1'><Main_4/></div>
         <div id='strategy'><Main_5/></div>
         <div id='visual'><Main_6/></div>
-        <div id='live'><Main_7 url="https://github.com"/></div>
+        <div id='live'><Main_7 url="https://seojihye-directorym.vercel.app/"/></div>
         <div id='logic'><Main_8/></div>
         <div id='proj2'><Main_9/></div>
         <div id='finish'><Main_10/></div>

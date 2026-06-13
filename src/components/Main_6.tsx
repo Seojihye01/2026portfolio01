@@ -48,35 +48,44 @@ const Main_6: React.FC = () => {
           
           <header className="main6_header">
             <h2 className="main6_main_title">VISUAL KIT SPEC</h2>
-            <span className="main6_sub_title">[ TYPOGRAPHY / CHROMATIC CODE OF DIRECTORY.M ]</span>
+            <span className="main6_sub_title">[ COLOUR CODE / TYPOGRAPHY / LOGOTYPE ]</span>
           </header>
 
           <div className="main6_typo_wrapper">
-            {/* Card 1: MONTSERRAT */}
             <div className="main6_typo_card font_montserrat">
               <div className="main6_card_body">
-                <span className="main6_font_family_vertical">ENG / SAN SERIF</span>
                 <h2 className="main6_font_main_print">MONTSERRAT</h2>
-                <p className="main6_font_reason">Geometric Impact / Editorial Scale / Visual Weight</p>
+                <p className="main6_font_reason">
+                  To deliver a clean, modern, and refined editorial identity across the platform
+                </p>
               </div>
+            
               <div className="main6_weight_stack">
                 {weights.map((w, idx) => (
-                  <span key={idx} className={`main6_stack_line w_${w}`}>MONTSERRAT</span>
+                  <span key={idx} className={`main6_stack_line w_${w}`}>{w}</span>
                 ))}
               </div>
             </div>
 
-            {/* Card 2: PRETENDARD */}
-            <div className="main6_typo_card font_pretendard">
-              <div className="main6_card_body">
-                <span className="main6_font_family_vertical">KOR / SAN SERIF</span>
-                <h2 className="main6_font_main_print">PRETENDARD</h2>
-                <p className="main6_font_reason">High Legibility / UI Optimization / Seamless Harmony</p>
+            <div 
+              className="main6_typo_card main6_logo_panel_card" 
+              style={{ backgroundImage: `url('/media/panel.jpg')` }}
+            >
+              <div className="main6_logo_left">
+                <h1 className="main6_logo_title">Directory.M</h1>
+                <div className="main6_logo_desc_group">
+                  <p className="main6_logo_desc">A structured movie archive platform</p>
+                  <p className="main6_logo_desc_sub">— designed for systematic classification and navigation</p>
+                </div>
               </div>
-              <div className="main6_weight_stack">
-                {weights.map((w, idx) => (
-                  <span key={idx} className={`main5_stack_line w_${w}`}>PRETENDARD</span>
-                ))}
+
+              <div className="main6_logo_right">
+                <div className="main6_logo_spec_box">
+                  <span className="main6_logo_spec_label">Typeface;</span>
+                  <h3 className="main6_logo_spec_value">Codec Cold Trial</h3>
+                </div>
+                <div className="main6_logo_divider" />
+                <span className="main6_logo_type">with a sleek, minimalist aesthetic</span>
               </div>
             </div>
           </div>

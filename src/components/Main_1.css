@@ -11,14 +11,14 @@
 .main1_data_zone {width: 35%; height: 100%; box-sizing: border-box; padding: 80px 0; display: flex; flex-direction: column;
                   justify-content: space-between;}
 
-.main1_data_top {text-align: right; display: flex; flex-direction: column; gap: 6px;}
+.main1_data_top {text-align: right; display: flex; flex-direction: column; gap: 6px; padding-right: 15px;}
 
 .main1_meta_job {font-size: 1.1rem; font-weight: 600; letter-spacing: 10%; margin: 0 0 10px 0;}
 
 .meta_detail_text {font-size: 0.7rem; font-weight: 300; color: #888; letter-spacing: 0.08em; margin: 0;}
 
 .main1_data_bottom {width: 100%; display: flex; flex-direction: row; justify-content: space-between; align-items: flex-end; 
-                    margin-top: auto;}
+                    margin-top: auto; padding-right: 15px;}
 
 .main1_meta_gps {display: flex; flex-direction: column; text-align: left; gap: 8px;}
 
@@ -41,7 +41,7 @@
 
   .main1_data_zone {width: 100%; height: 55vh; padding: 20px 0;}
 
-  .main1_data_top {text-align: right; display: flex; flex-direction: column; gap: 6px; margin-top: 120px;}
+  .main1_data_top {text-align: right; display: flex; flex-direction: column; gap: 6px; margin-top: 120px; padding-right: 45px;}
 
   .main1_meta_job {font-size: 0.95rem; margin: 0 0 6px 0;}
 
@@ -51,7 +51,8 @@
 
   .meta_location {font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; margin: 0; line-height: 1.2;}
 
-  .meta_date {font-size: 0.8rem; font-weight: 400; color: #121212; letter-spacing: 8%; margin: 0; white-space: nowrap;}
+  .meta_date {font-size: 0.8rem; font-weight: 400; color: #121212; letter-spacing: 8%; margin: 0; white-space: nowrap;
+              padding-right: 35px;}
 
 }
 
@@ -66,7 +67,7 @@
               pointer-events: none;}
 
   .main1_data_top {width: 100%; max-width: 100%; display: flex; flex-direction: column; align-items: flex-end; 
-                   text-align: right; margin-left: auto; padding: 0; margin-top: 160px;}
+                   text-align: right; margin-left: auto; padding-right: 15px; margin-top: 160px;}
 
   .main1_meta_job {width: auto; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 2px;}
 
@@ -81,7 +82,7 @@
 
   .meta_location {font-size: 0.8rem;}
 
-  .meta_date {font-size: 0.75rem; margin-top: 12px;}
+  .meta_date {font-size: 0.75rem; margin-top: 12px; padding-right: 15px;}
 
 }
 

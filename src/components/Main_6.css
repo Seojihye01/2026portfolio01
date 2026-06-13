@@ -10,7 +10,7 @@
 .main6_lane_wrapper {display: flex; gap: 12px; align-items: stretch;}
 
 .main6_label_card {width: 76px; background-color: #F9F9F9; display: flex; flex-direction: column; align-items: center;
-                   justify-content: space-between; padding: 8px 0; position: relative; 
+                   justify-content: space-between; padding: 8px 0; position: relative; transition: transform 0.2s ease;
                    box-shadow: 0 4px 15px rgba(18, 18, 18, 0.03); cursor: pointer;}
 
 .main6_label_card:hover, .main6_label_card:active {transform: scale(1.03);}
@@ -68,25 +68,25 @@
 
 .main6_typo_card {flex: 1; background-color: #F9F9F9; padding: 30px; display: flex; justify-content: space-between;
                   align-items: stretch; position: relative; box-shadow: 0 4px 15px rgba(18, 18, 18, 0.03);
-                  cursor: pointer;}
+                  cursor: pointer; transition: transform 0.2s ease;}
 
 .main6_typo_card:hover, .main_typo_card:active {transform: scale(1.03);}
 
-.font_pretendard {font-family: 'Pretendard', -apple-system, sans-serif;}
+.main6_typo_card.font_montserrat {display: flex; justify-content: space-between; align-items: center; padding: 30px;
+                                  position: relative;}
 
-.main6_card_body {display: flex; flex-direction: column; justify-content: space-between; position: relative; padding-left: 24px;}
+.font_montserrat .main6_card_body {background-color: #121212; color: #F9F9F9; padding: 24px; width: 60%; gap: 14px;
+                                   height: auto; display: flex; flex-direction: column; justify-content: center; 
+                                   position: relative; }
 
-.main6_font_family_vertical {position: absolute; left: 0; top: 0; font-size: 10px; font-weight: 600; color: #888;
-                             writing-mode: vertical-lr; white-space: nowrap;}
+.font_montserrat .main6_font_main_print {position: static; font-size: 20px; letter-spacing: 0.05em; font-weight: 800; 
+                                         color: #f9f9f9; pointer-events: none; margin: 0; line-height: 1;} 
 
-.main6_font_main_print {font-size: 38px; letter-spacing: -0.01em; font-weight: 800; margin: 0 0 0 20px; line-height: 1;}
-
-.main6_font_reason {font-size: 11px; letter-spacing: 0.01em; font-weight: 400; color: #666; margin: 0 0 0 20px;}
-
-.font_pretendard .main6_font_reason {font-weight: 300;}
+.main6_font_reason {font-size: 14px; letter-spacing: 0.01em; font-weight: 400; color: #f9f9f9; margin: 0; 
+                    line-height: 1.6;}
 
 .main6_weight_stack {display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end;
-                     text-align: right; border-left: 1px dashed rgba(18, 18, 18, 0.1); padding-left: 30px;}
+                     text-align: right; border-left: 1px dashed rgba(18, 18, 18, 0.1); padding-left: 24px; height: 100%;}
 
 .main6_stack_line {font-size: 11px; letter-spacing: 0.05em; line-height: 1.2;}
 
@@ -104,6 +104,24 @@
 
 .w_black {font-weight: 900; color: #000;}
 
+.main6_logo_panel_card {background-size: cover; background-position: center; color: #121212; 
+                        font-family: 'Codec Cold Trial ', sans-serif;}
+
+.main6_logo_left {display: flex; flex-direction: column; justify-content: space-between; width: 60%;}
+
+.main6_logo_right {display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-end; 
+                   text-align: right; width: 35%;}
+
+.main6_logo_spec_box {display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px;}
+
+.main6_logo_spec_label {font-size: 12px; font-weight: 400; color: #444; margin-bottom: 5px;}
+
+.main6_logo_spec_value {font-size: 18px; font-weight: 500; margin: 0; color: #121212;}
+
+.main6_logo_divider {width: 100%; border-top: 1px dashed rgba(18, 18, 18, 0.25); margin: 8px 0;}
+
+.main6_logo_type {font-size: 13px; font-weight: 400; color: #333; letter-spacing: 0.02em;}
+
 /* Responsive Design */
 /* 1. 태블릿(1024px 이하) */
 @media screen and (max-width: 1024px) {
@@ -118,12 +136,12 @@
 
   .main6_lane_wrapper {width: 100%; flex-direction: column; gap: 6px;}
 
-  .main6_label_card {width: 100%; height: 70px; flex-direction: row; justify-content: space-between; 
-                     align-items: center; padding: 0 6px;}
+  .main6_label_card {width: 100%; height: 62px; flex-direction: row; justify-content: space-between; 
+                     align-items: center; padding: 0 6px; align-items: center;}
 
   .main6_chip_box {flex-direction: row; align-items: center; gap: 0px;}
 
-  .main6_colour_square {width: 58px; height: 58px; flex-shrink: 0;}
+  .main6_colour_square {width: 50px; height: 50px; flex-shrink: 0;}
   
   .main6_colour_code {font-size: 11px; margin: 0; transform: rotate(-90deg) translateY(-10px);}
 
@@ -145,22 +163,46 @@
   .main6_typo_wrapper {flex-direction: row; gap: 10px; width: 100%;}
 
   .main6_typo_card {flex: 1; flex-direction: column; align-items: stretch; justify-content: space-between;
-                    min-height: 330px; padding: 24px; min-width: 100px;}
+                    min-height: 330px; padding: 16px 24px; min-width: 100px;}
+
+  .main6_typo_card.font_montserrat {padding: 20px;}
 
   .main6_card_body {padding-left: 0; gap: 12px; align-items: flex-start;}
 
-  .main6_font_family_vertical {position: static; writing-mode: horizontal-tb;}
+  .font_montserrat .main6_card_body {width: 110%; height: auto; margin-bottom: 20px; padding: 15px;}
 
-  .main6_font_main_print {font-size: 20px; margin: 0;}
-  
-  .main6_font_reason {margin: 0; font-size: 11px; line-height: 1.4;}
+  .font_montserrat .main6_font_main_print {font-size: 14px; margin: 0 0 10px 0; padding-left: 0;}
+
+  .main6_font_reason {margin: 0; font-size: 14px; line-height: 1.7;}
 
   .main6_weight_stack {position: static; width: 100%; margin-top: auto; border-left: none; 
-                       border-top: 1px dashed rgba(18, 18, 18, 0.15); padding: 16px 0 0 0; 
+                       border-top: 1px dashed rgba(18, 18, 18, 0.15); padding: 0; 
                        flex-direction: row; flex-wrap: wrap; justify-content: flex-start; 
-                       text-align: left; gap: 8px 12px;}
+                       text-align: left; gap: 0px 6px;}
 
   .main6_stack_line {font-size: 11px; white-space: nowrap;}
+
+  .main6_logo_panel_card {flex-direction: column; justify-content: space-between; gap: 24px;}
+
+  .main6_logo_left, .main6_logo_right {width: 100%; align-items: flex-start; text-align: left; transform: translateY(-3px);}
+
+  .main6_logo_title {font-size: 22px; letter-spacing: 1px; font-weight: 800; margin: 5px 0 20px 0;}
+
+  .main6_logo_desc_group {gap: 16px;}
+
+  .main6_logo_desc {font-size: 13px; font-weight: 500; margin: 0; color: #444; line-height: 1.4;}
+
+  .main6_logo_desc_sub {font-size: 12.5px; font-weight: 400; margin-top: 10px; line-height: 1.4;}
+
+  .main6_logo_right {align-items: flex-end; text-align: right;}
+
+  .main6_logo_spec_box {margin-top: 6px;}
+
+  .main6_logo_spec_value {font-size: 16px;}
+
+  .main6_logo_divider {margin-top: 16px;}
+
+  .main6_logo_type {line-height: 1.4;}
   
 }
 
@@ -172,5 +214,13 @@
   .main6_typo_wrapper {flex-direction: column;}
 
   .main6_typo_card {min-height: 36px;}
+
+  .font_montserrat .main6_card_body {padding: 16px;}
+
+  .font_montserrat .main6_font_main_print {font-size: 26px;}
+
+  .main6_weight_stack {display: none;} 
+
+  .main6_logo_title {font-size: 32px;}
 
 }

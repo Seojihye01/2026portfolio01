@@ -22,11 +22,11 @@ const TRACK_DATA: TrackContent[] = [
     menuTitle: 'MAIN',
     videoSrc: '/media/pf_1.mp4', 
     ko: {
-      subTitle: '큐레이션 인트로',
+      subTitle: 'Curation Introduction',
       logics: [
-        '퍼즐 기반의 사용자 참여 유도',
-        '직관적인 조각 맞춤을 통한 인터랙티브 CTA 구현',
-        '선택적 매칭을 통한 개인화된 콘텐츠 발견 프로세스'
+        '퍼즐 요소를 통한 사용자 참여 유도',
+        '촉각적 조각 맞춤을 통한 상호작용형 CTA 설계',
+        '선택적 매칭을 통한 개인 맞춤형 콘텐츠 탐색 과정'
       ]
     },
     en: {
@@ -44,11 +44,11 @@ const TRACK_DATA: TrackContent[] = [
     menuTitle: 'CURATION',
     videoSrc: '/media/pf_2.mp4',
     ko: {
-      subTitle: '엠블럼',
+      subTitle: 'Emblem',
       logics: [
-        '영화적 상징물을 보관하는 인터랙티브 금고',
-        '클릭하여 열리는 드로어 메커니즘 설계',
-        '숨겨진 오브제를 통한 호기심 자극형 탐색 경험'
+        '영화적 상징물을 보관하는 상호작용형 금고',
+        '클릭으로 구동되는 서랍형 메커니즘 설계',
+        '숨겨진 오브제를 통한 호기심 자극형 능동적 탐색 경험 유도'
       ]
     },
     en: {
@@ -66,11 +66,11 @@ const TRACK_DATA: TrackContent[] = [
     menuTitle: 'EXPLORE',
     videoSrc: '/media/pf_3.mp4',
     ko: {
-      subTitle: '엑시비션',
+      subTitle: 'Exhibition',
       logics: [
         '월별 테마 중심의 컨셉 탐해 구조',
-        '몰입감을 극대화하는 전체 화면 레이아웃',
-        '서사적 동화를 위한 컨셉 우선형 프레임워크 설계'
+        '시각적 압도감을 극대화하는 전체 화면 전시 레이아웃',
+        '서사적 몰입을 위한 컨셉형 프레임워크 설계'
       ]
     },
     en: {
@@ -88,11 +88,11 @@ const TRACK_DATA: TrackContent[] = [
     menuTitle: 'FUNDING',
     videoSrc: '/media/pf_4.mp4',
     ko: {
-      subTitle: '#테이크01',
+      subTitle: '#TAKE01',
       logics: [
-        '슬레이트(클래퍼보드) 컨셉의 스크롤 락 트랩 구현',
+        '클래퍼보드 컨셉의 스크롤 락 트랩 구현',
         '커스텀 커서 카운트다운 및 액션 트리거 설계',
-        '영화적 인터랙션을 통한 관객 참여형 UI 유도'
+        '영화적 상호작용을 통한 관객 참여형 UI 유도'
       ]
     },
     en: {
