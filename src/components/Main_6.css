@@ -1,3 +1,38 @@
+@font-face {
+  font-family: 'Codec Cold Trial';
+  src: url('/font/Codec-Cold-News-trial.ttf') format('truetype');
+  font-weight: 400; /* news */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Codec Cold Trial';
+  src: url('/font/Codec-Cold-Regular-trial.ttf') format('truetype');
+  font-weight: 500; /* regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Codec Cold Trial';
+  src: url('/font/Codec-Cold-Bold-trial.ttf') format('truetype');
+  font-weight: 600; /* bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Codec Cold Trial';
+  src: url('/font/Codec-Cold-ExtraBold-trial.ttf') format('truetype');
+  font-weight: 700; /* extrabold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Codec Cold Trial';
+  src: url('/font/Codec-Cold-Heavy-trial.ttf') format('truetype');
+  font-weight: 800; /* heavy */
+  font-style: normal;
+}
+
 .main6_container, .main6_container *, .main6_container *::before, .main6_container *::after {box-sizing: border-box;}
 
 .main6_container {width: 100%; min-height: 100vh; display: flex; justify-content: center; align-items: center;
@@ -72,7 +107,7 @@
 
 .main6_typo_card:hover, .main_typo_card:active {transform: scale(1.03);}
 
-.main6_typo_card.font_montserrat {display: flex; justify-content: space-between; align-items: center; padding: 30px;
+.main6_typo_card.font_montserrat {display: flex; justify-content: space-between; align-items: center; padding: 27px;
                                   position: relative;}
 
 .font_montserrat .main6_card_body {background-color: #121212; color: #F9F9F9; padding: 24px; width: 60%; gap: 14px;
@@ -105,18 +140,26 @@
 .w_black {font-weight: 900; color: #000;}
 
 .main6_logo_panel_card {background-size: cover; background-position: center; color: #121212; 
-                        font-family: 'Codec Cold Trial ', sans-serif;}
+                        font-family: 'Codec Cold Trial', sans-serif;}
 
 .main6_logo_left {display: flex; flex-direction: column; justify-content: space-between; width: 60%;}
+
+.main6_logo_title {font-size: 32px; letter-spacing: 1px; font-weight: 800; margin: 5px 0 20px 0;}
+
+.main6_logo_desc_group {gap: 16px;}
+
+.main6_logo_desc {font-size: 14px; font-weight: 500; margin: 0; color: #333; line-height: 1.4;}
+
+.main6_logo_desc_sub {font-size: 14px; font-weight: 400; margin-top: 10px; line-height: 1.4;}
 
 .main6_logo_right {display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-end; 
                    text-align: right; width: 35%;}
 
 .main6_logo_spec_box {display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px;}
 
-.main6_logo_spec_label {font-size: 12px; font-weight: 400; color: #444; margin-bottom: 5px;}
+.main6_logo_spec_label {font-size: 13px; font-weight: 500; color: #444; margin-bottom: 5px;}
 
-.main6_logo_spec_value {font-size: 18px; font-weight: 500; margin: 0; color: #121212;}
+.main6_logo_spec_value {font-size: 17px; font-weight: 600; margin: 0; color: #121212;}
 
 .main6_logo_divider {width: 100%; border-top: 1px dashed rgba(18, 18, 18, 0.25); margin: 8px 0;}
 
@@ -165,7 +208,7 @@
   .main6_typo_card {flex: 1; flex-direction: column; align-items: stretch; justify-content: space-between;
                     min-height: 330px; padding: 16px 24px; min-width: 100px;}
 
-  .main6_typo_card.font_montserrat {padding: 20px;}
+  .main6_typo_card.font_montserrat {padding: 20px 30px;}
 
   .main6_card_body {padding-left: 0; gap: 12px; align-items: flex-start;}
 
@@ -184,7 +227,7 @@
 
   .main6_logo_panel_card {flex-direction: column; justify-content: space-between; gap: 24px;}
 
-  .main6_logo_left, .main6_logo_right {width: 100%; align-items: flex-start; text-align: left; transform: translateY(-3px);}
+  .main6_logo_left, .main6_logo_right {width: 100%; align-items: flex-start; text-align: left; transform: translateY(1px);}
 
   .main6_logo_title {font-size: 22px; letter-spacing: 1px; font-weight: 800; margin: 5px 0 20px 0;}
 
