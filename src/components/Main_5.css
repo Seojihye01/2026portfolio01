@@ -97,7 +97,7 @@
 
   .main5_header_footer {justify-content: flex-start;}
 
-  .main5_content_side {padding: 30px 25px;}
+  .main5_content_side {padding: 30px 25px; backdrop-filter: blur(2.5px); -webkit-backdrop-filter: blur(2.5px);}
 
   .main5_detail_body p {font-size: 14px; line-height: 1.7;}
 

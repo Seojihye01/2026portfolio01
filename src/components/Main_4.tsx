@@ -29,11 +29,11 @@ const Main_4: React.FC = () => {
           <h1 className="main4_main_title">DIRECTORY.M</h1>
         </div>
       </header>
-      <p className="main4_sub_tag">Web Publishing / UX UI Design / Branding</p>
+      <p className="main4_sub_tag role">Web Publishing / UX UI Design / Branding</p>
 
       <div className="main4_sub_right">
           <span className="main4_sub_meta">Duration : 6M (25.12 - 26.05)</span>
-          <span className="main4_sub_meta text_bold">BIB NO. M-01</span>
+          <span className="main4_sub_meta text_bold">BIB NO. P-01</span>
       </div>
 
       <div className="main4_hero_visual_bar">

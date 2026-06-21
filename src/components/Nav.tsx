@@ -14,7 +14,7 @@ const Nav = ({ isMenuOpen }: NavProps) => {
     const sections = [
         { id: 'start', label: '01 | START LINE' },
         { id: 'slogan', label: '02 | SLOGAN' },
-        { id: 'profile', label: '03 | RUNNER PROFILE' },
+        { id: 'profile', label: '03 | RACE INFO CENTRE' },
         { id: 'proj1', label: '04 | MAIN RACE' },
         { id: 'strategy', label: '05 | RACE STRATEGY' },
         { id: 'visual', label: '06 | VISUAL KIT' },

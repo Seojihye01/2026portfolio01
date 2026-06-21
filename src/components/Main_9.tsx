@@ -24,17 +24,17 @@ const Main_9: React.FC = () => {
           <span className="main9_sub_label">Distance : Half Course</span>
           <div className='main9_sub_set'>
             <p className="main9_sub_tag bold">Personal Project</p>
-            <p className="main9_sub_tag">Web Publishing / UX UI Design / Branding</p>
           </div>
         </div>
         <div className="main9_title_section">
           <h1 className="main9_main_title">FRUIT CAMP</h1>
         </div>
       </header>
+      <p className="main9_sub_tag">Web Publishing / UX UI Design / Branding</p>
 
       <div className="main9_sub_right">
         <span className="main9_sub_meta">Duration : 1D (25.12)</span>
-        <span className="main9_sub_meta text_bold">BIB NO. M-02</span>
+        <span className="main9_sub_meta text_bold">BIB NO. P-02</span>
       </div>
 
       <div className="main9_hero_visual_bar">
