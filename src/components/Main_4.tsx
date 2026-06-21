@@ -23,13 +23,13 @@ const Main_4: React.FC = () => {
           <span className="main4_sub_label">Distance : Full Course</span>
           <div className='main4_sub_set'>
             <p className="main4_sub_tag bold">Personal Project</p>
-            <p className="main4_sub_tag">Web Publishing / UX UI Design / Branding</p>
           </div>
         </div>
          <div className="main4_title_section">
           <h1 className="main4_main_title">DIRECTORY.M</h1>
         </div>
       </header>
+      <p className="main4_sub_tag">Web Publishing / UX UI Design / Branding</p>
 
       <div className="main4_sub_right">
           <span className="main4_sub_meta">Duration : 6M (25.12 - 26.05)</span>

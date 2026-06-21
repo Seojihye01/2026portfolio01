@@ -112,9 +112,9 @@
 
   .main3_meta_value {font-size: 8.5px; color: #121212;}
 
-  .main3_meta_value.bold {font-size: 13px; font-weight: 700;}
+  .main3_meta_value.bold {font-size: 12px; font-weight: 700;}
 
-  .main3_sheet_body {gap: 40px;}
+  .main3_sheet_body {gap: 30px;}
 
   .main3_giant_title {font-size: 30px; font-weight: 900; line-height: 1.1;}
 
@@ -122,7 +122,7 @@
 
   .main3_section_label {font-size: 10.5px;}
 
-  .main3_content_item, .main3_record_title {font-size: 12px; line-height: 1.6;}
+  .main3_content_item, .main3_record_title {font-size: 12px; line-height: 1.7;}
 
   .main3_record_group {display: flex; flex-direction: column; gap: 24px;}
 
