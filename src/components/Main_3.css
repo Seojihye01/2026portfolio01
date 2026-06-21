@@ -100,7 +100,7 @@
 
   .main3_track_header {margin-left: 5px;}
 
-  .main3_timeline_wrapper {margin-left: 20px; margin-bottom: 15px;}
+  .main3_timeline_wrapper {margin-left: 10px; margin-bottom: 15px;}
   
   .race_content_sheet {padding: 20px 40px;}
 
@@ -108,11 +108,11 @@
 
   .main3_meta_item {display: flex; flex-direction: column; align-items: flex-start; gap: 10px;}
 
-  .main3_meta_title {font-size: 10.5px; color: #888; font-weight: 400;}
+  .main3_meta_title {font-size: 10px; color: #888; font-weight: 400;}
 
-  .main3_meta_value {font-size: 9px; color: #121212;}
+  .main3_meta_value {font-size: 8.5px; color: #121212;}
 
-  .main3_meta_value.bold {font-size: 14px; font-weight: 700;}
+  .main3_meta_value.bold {font-size: 13px; font-weight: 700;}
 
   .main3_sheet_body {gap: 40px;}
 
