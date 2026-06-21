@@ -7,17 +7,17 @@
 .dot {width: 8px; height: 8px; border-radius: 50%; transition: all 0.3s ease;}
 
 .label {font-size: 10px; letter-spacing: 0.1em; margin-right: 15px; opacity: 0; transform: translateX(5px);
-        transition: opacity 0.3s ease;}
+        transition: opacity 0.3s ease; width: 100%; height: 100%; padding: 5px;}
 
 .theme_dark .dot {background-color: rgba(249, 249, 249, 0.3);}
 
-.theme_dark .label {color: #f9f9f9;}
+.theme_dark .label {color: #121212; background: #f9f9f9;}
 
 .theme_dark .elevator_btn:hover .dot {background-color: #f9f9f9;}
 
 .theme_light .dot {background-color: rgba(18, 18, 18, 0.3);}
 
-.theme_light .label {color: #121212;}
+.theme_light .label {color: #f9f9f9; background: #121212;}
 
 .theme_light .elevator_btn:hover .dot {background-color: #121212;}
 

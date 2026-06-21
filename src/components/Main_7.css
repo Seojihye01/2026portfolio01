@@ -19,7 +19,7 @@
 
 .main7_meta_block {display: flex; flex-direction: column; gap: 6px;}
 
-.main7_meta_label {font-size: 0.68rem; font-weight: 400; color: #7A7A7C; letter-spacing: 0.03em;}
+.main7_meta_label {font-size: 11px; font-weight: 400; color: #7A7A7C; letter-spacing: 0.03em;}
 
 .main7_meta_value {font-size: 13px; font-weight: 500; letter-spacing: -0.01em; color: #121212;}
 
@@ -30,7 +30,7 @@
 /* 1. 모바일(768px 이하) */
 @media (max-width: 768px) {
 
-  .main7_track_container {padding: 0 40px; left: 60px;}
+  .main7_track_container {left: 60px;}
   
   .main7_row_2 {flex-direction: column; gap: 20px;}
 
@@ -45,6 +45,12 @@
 /* 2. 소형 모바일(600px 이하) */
 @media (max-width: 600px) {
 
-  .main7_track_container {padding: 0 40px; left: 10px;}
+  .main7_track_container {left: 0;}
+
+  .main7_title, .main7_project_name {font-size: 25px;}
+
+  .main7_meta_label {font-size: 10.5px;}
+
+  .main7_meta_value {font-size: 12.5px;}
 
 }

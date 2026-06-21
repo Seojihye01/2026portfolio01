@@ -66,8 +66,10 @@
   .track_svg {position: absolute; left: -120px; top: 75%; transform: translateY(-50%); width: 100%; height: auto;
               pointer-events: none;}
 
+  .main1_data_zone {padding: 40px 0;}
+
   .main1_data_top {width: 100%; max-width: 100%; display: flex; flex-direction: column; align-items: flex-end; 
-                   text-align: right; margin-left: auto; padding-right: 15px; margin-top: 160px;}
+                   text-align: right; margin-left: auto; padding-right: 15px; margin-top: 120px;}
 
   .main1_meta_job {width: auto; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 2px;}
 

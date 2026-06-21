@@ -1,10 +1,10 @@
 .main3_container {width: 100%; min-height: 100vh; background-color: #E5E5E7; display: flex;
                   justify-content: center; align-items: center; flex-direction: column;}
 
-.main3_top_wrapper {width: 100%; background-color: #121212;}
+.main3_top_wrapper {width: 100%; background-color: #121212; align-items: center;}
 
 .main3_track_sidebar {width: 100%; max-width: 1200px; height: 140px; background-color: #121212; margin: 0 auto;
-                      color: rgba(249, 249, 249, 0.8); padding: 24px 40px; display: flex; flex-direction: column;}
+                      color: rgba(249, 249, 249, 0.8); padding: 24px 0; display: flex; flex-direction: column;}
 
 .main3_track_header {font-size: 13px; letter-spacing: 0.1em; font-weight: 400; margin-bottom: 15px; margin-left: 68px;}
 
@@ -100,30 +100,32 @@
 
   .main3_track_header {margin-left: 5px;}
 
-  .main3_timeline_wrapper {margin-left: 30px; margin-bottom: 15px;}
+  .main3_timeline_wrapper {margin-left: 20px; margin-bottom: 15px;}
   
-  .race_content_sheet {padding: 30px 40px;}
+  .race_content_sheet {padding: 20px 40px;}
+
+  .main3_sheet_header {padding-bottom: 15px; margin-bottom: 20px;}
 
   .main3_meta_item {display: flex; flex-direction: column; align-items: flex-start; gap: 10px;}
 
   .main3_meta_title {font-size: 10.5px; color: #888; font-weight: 400;}
 
-  .main3_meta_value {font-size: 9.5px; color: #121212;}
+  .main3_meta_value {font-size: 9px; color: #121212;}
 
-  .main3_meta_value.bold {font-size: 15px; font-weight: 700;}
+  .main3_meta_value.bold {font-size: 14px; font-weight: 700;}
 
   .main3_sheet_body {gap: 40px;}
 
-  .main3_giant_title {font-size: 36px; font-weight: 900; line-height: 1.1;}
+  .main3_giant_title {font-size: 30px; font-weight: 900; line-height: 1.1;}
 
-  .section_sub_title {font-size: 12.5px; margin-bottom: 0px;}
+  .section_sub_title {font-size: 12px; margin-bottom: 0px;}
 
-  .main3_section_label {font-size: 11px;}
+  .main3_section_label {font-size: 10.5px;}
 
-  .main3_content_item, .main3_record_title {font-size: 13px; line-height: 1.6;}
+  .main3_content_item, .main3_record_title {font-size: 12px; line-height: 1.6;}
 
   .main3_record_group {display: flex; flex-direction: column; gap: 24px;}
 
-  .main3_record_sub {font-size: 12px; color: #888; margin-top: 5px;}
+  .main3_record_sub {font-size: 11px; color: #777; margin-top: 5px;}
   
 }
