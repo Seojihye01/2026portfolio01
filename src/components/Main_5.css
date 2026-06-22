@@ -86,7 +86,9 @@
   .main5_strategy_container {padding: 30px 40px;}
 
   .main5_editorial_header {padding: 30px 24px;}
-  
+
+  .main5_header_top_bar {padding-bottom: 20px; margin-bottom: 20px;}
+
   .main5_header_main_grid {flex-direction: column; align-items: flex-start; gap: 30px;}
 
   .main5_vertical_nav {width: 100%;}
@@ -95,10 +97,12 @@
 
   .main5_strategy_title {text-align: left; font-size: 24px;}
 
-  .main5_header_footer {justify-content: flex-start;}
+  .main5_header_footer {justify-content: flex-start; margin-top: 25px;}
 
-  .main5_content_side {padding: 30px 25px; backdrop-filter: blur(2.5px); -webkit-backdrop-filter: blur(2.5px);}
+  .main5_split_layout {margin-top: 20px;}
+
+  .main5_content_side {padding: 20px 25px; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);}
 
   .main5_detail_body p {font-size: 14px; line-height: 1.7;}
-
+  
 }

@@ -58,16 +58,17 @@ const Nav = ({ isMenuOpen }: NavProps) => {
     return (
     <nav className={`elevator_nav ${isDarkSection ? 'theme_dark' : 'theme_light'}`}>
         {sections.map((sec) => {
-            const isActive = activeSection === sec.id; // ★ 추가: 현재 루프 도는 섹션이 활성화되었는지 판단
+            const isActive = activeSection === sec.id; // 현재 루프 도는 섹션이 활성화되었는지 판단
             return (
-                <button 
+                <div 
                     key={sec.id} 
-                    onClick={() => scrollToSection(sec.id)}
-                    className={`elevator_btn ${isActive ? 'active' : ''}`} // ★ 수정: 활성화 시 active 클래스 부여
+                    className={`elevator_btn ${isActive ? 'active' : ''}`} // 활성화 시 active 클래스 부여
                 >
                     <span className="label">{sec.label}</span>
-                    <span className="dot" />
-                </button>
+                    <button className='dot_wrapper' onClick={() => scrollToSection(sec.id)} aria-label={sec.label}>
+                        <span className="dot" />
+                    </button>
+                </div>
             );
         })}
     </nav>
