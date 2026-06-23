@@ -49,4 +49,8 @@
 
     .dot {width: 6px; height: 6px;}
 
+    .dot_wrapper {width: 10px; height: 10px;}
+
+    .label {pointer-events: none;}
+
 }

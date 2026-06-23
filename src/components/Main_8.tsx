@@ -116,12 +116,12 @@ const Main_8: React.FC = () => {
   return (
     <section className="main8_container" data-theme="light">
       
-      {/* [상단] 대형 트랙 인디케이터 배너 (언어 토글이 우측 배치됨) */}
+      {/* 트랙 인디케이터 배너 */}
       <div className="main8_top">
         <div className="main8_flow_set">
           <span className="main8_title">EXPERIENCE FLOW</span>
           
-          {/* 💡 num 배치를 빼고 상단 우측으로 들어온 다국어 스위치 */}
+          {/* num 배치를 빼고 상단 우측으로 들어온 다국어 스위치 */}
           <div className="main8_top_lang_toggle">
             <button
               type="button"
