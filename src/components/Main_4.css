@@ -1,5 +1,8 @@
-.main4_container {width: 100%; max-width: 1100px; height: 100vh; margin: 0 auto; padding: 60px 60px;
-                  background-color: #F9f9f9; color: #121212; box-sizing: border-box;}
+.main4_container {width: 100%; max-width: 1100px; height: 100vh; margin: 0 auto; padding: 0 60px;
+                  background-color: #F9f9f9; color: #121212; box-sizing: border-box; display: flex;
+                  justify-content: center; align-items: center;}
+
+.main4_inner {width: 100%; max-width: 1100px; display: flex; flex-direction: column;}
 
 .main4_sub_header {display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 5px;}
 
@@ -62,7 +65,7 @@
 /* 2. 모바일(768px 이하) */
 @media screen and (max-width: 768px) {
 
-  .main4_container {padding: 50px;}
+  .main4_container {height: auto; min-height: 100vh; padding: 60px 40px; align-items: flex-start;}
 
   .main4_sub_header {display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; 
                      gap: 16px; width: 100%;}

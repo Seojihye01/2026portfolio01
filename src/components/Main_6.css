@@ -144,11 +144,7 @@
 
 .main6_logo_title {font-size: 32px; letter-spacing: 1px; font-weight: 800; margin: 5px 0 20px 0;}
 
-.main6_logo_desc_group {gap: 16px;}
-
 .main6_logo_desc {font-size: 14px; font-weight: 500; margin: 0; color: #333; line-height: 1.4;}
-
-.main6_logo_desc_sub {font-size: 14px; font-weight: 400; margin-top: 10px; line-height: 1.4;}
 
 .main6_logo_right {display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-end; 
                    text-align: right; width: 35%;}
@@ -215,7 +211,7 @@
 
   .font_montserrat .main6_font_main_print {font-size: 14px; margin: 0 0 10px 0; padding-left: 0;}
 
-  .main6_font_reason {margin: 0; font-size: 12px; line-height: 1.7;}
+  .main6_font_reason {margin: 0; font-size: 10.5px; line-height: 1.7;}
 
   .main6_weight_stack {position: static; width: 100%; margin-top: auto; border-left: none; padding: 0; gap: 0 6px;
                        border-top: 1px dashed rgba(18, 18, 18, 0.15); flex-direction: row; flex-wrap: wrap; 
@@ -227,24 +223,22 @@
 
   .main6_logo_left, .main6_logo_right {width: 100%; align-items: flex-start; text-align: left; transform: translateY(1px);}
 
-  .main6_logo_title {font-size: 22px; letter-spacing: 1px; font-weight: 800; margin: 5px 0 20px 0;}
+  .main6_logo_title {font-size: 20px; letter-spacing: 1px; font-weight: 800; margin: 5px 0 20px 0;}
 
-  .main6_logo_desc_group {gap: 16px;}
-
-  .main6_logo_desc {font-size: 13px; font-weight: 500; margin: 0; color: #444; line-height: 1.4;}
-
-  .main6_logo_desc_sub {font-size: 12.5px; font-weight: 400; margin-top: 10px; line-height: 1.4;}
+  .main6_logo_desc {font-size: 12.5px; font-weight: 500; margin: 0; color: #444; line-height: 1.4;}
 
   .main6_logo_right {align-items: flex-end; text-align: right;}
 
   .main6_logo_spec_box {margin-top: 6px;}
 
-  .main6_logo_spec_value {font-size: 16px;}
+  .main6_logo_spec_label {font-size: 12.5px;}
+
+  .main6_logo_spec_value {font-size: 15.5px;}
 
   .main6_logo_divider {margin-top: 16px;}
 
   .main6_logo_type {line-height: 1.4;}
-  
+
 }
 
 /* 2. 초소형 모바일(480px 이하) */
@@ -258,10 +252,16 @@
 
   .font_montserrat .main6_card_body {padding: 16px;}
 
-  .font_montserrat .main6_font_main_print {font-size: 26px;}
+  .font_montserrat .main6_font_main_print {font-size: 20px;}
 
-  .main6_weight_stack {display: none;} 
+  .main6_font_reason {font-size: 13px;}
 
-  .main6_logo_title {font-size: 32px;}
+  .main6_logo_title {font-size: 20px;}
+
+  .main6_logo_desc {font-size: 13px;}
+
+  .main6_logo_spec_label {font-size: 12px;}
+
+  .main6_logo_spec_value {font-size: 16px;}
 
 }
