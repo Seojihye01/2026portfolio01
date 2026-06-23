@@ -46,6 +46,8 @@
 
   .main7_title, .main7_project_name {margin-left: 0; font-size: 30px;}
 
+  .main7_title {font-size: 20px;}
+
   .main7_project_name {margin-left: 117px;}
 
   .main7_row_3 {padding-left: 90px;}
@@ -58,6 +60,8 @@
   .main7_track_container {left: 0;}
 
   .main7_title, .main7_project_name {font-size: 25px;}
+
+  .main7_title {font-size: 16px;}
 
   .main7_meta_label {font-size: 10.5px;}
 

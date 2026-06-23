@@ -250,18 +250,20 @@
 
   .main6_typo_card {min-height: 36px;}
 
-  .font_montserrat .main6_card_body {padding: 16px;}
+  .font_montserrat .main6_card_body {padding: 16px 22px;}
 
   .font_montserrat .main6_font_main_print {font-size: 20px;}
 
-  .main6_font_reason {font-size: 13px;}
+  .main6_font_reason {font-size: 12px;}
 
-  .main6_logo_title {font-size: 20px;}
+  .main6_weight_stack {display: none;}
+
+  .main6_logo_title {font-size: 21px;}
 
   .main6_logo_desc {font-size: 13px;}
 
   .main6_logo_spec_label {font-size: 12px;}
 
-  .main6_logo_spec_value {font-size: 16px;}
+  .main6_logo_spec_value {font-size: 15px;}
 
 }
