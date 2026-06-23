@@ -110,14 +110,13 @@
 .main6_typo_card.font_montserrat {display: flex; justify-content: space-between; align-items: center; padding: 18px;
                                   position: relative;}
 
-.font_montserrat .main6_card_body {border: 3.5px solid #121212; padding: 24px; width: 60%; gap: 14px; height: auto; 
+.font_montserrat .main6_card_body {border: 3.5px solid #121212; padding: 24px; width: 60%; gap: 14px; height: auto;
                                    display: flex; flex-direction: column; justify-content: center; position: relative;}
 
 .font_montserrat .main6_font_main_print {position: static; font-size: 20px; letter-spacing: 0.05em; font-weight: 800; 
-                                         color: #121212; pointer-events: none; margin: 0; line-height: 1;} 
+                                         color: #121212; pointer-events: none; margin: 4px 0 0; line-height: 1;} 
 
-.main6_font_reason {font-size: 14px; letter-spacing: 0.01em; font-weight: 400; color: #121212; margin: 0; 
-                    line-height: 1.6;}
+.main6_font_reason {font-size: 13px; letter-spacing: 0.01em; font-weight: 400; color: #333; margin: 0; line-height: 1.8;}
 
 .main6_weight_stack {display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end;
                      text-align: right; border-left: 1px dashed rgba(18, 18, 18, 0.1); padding-left: 24px; height: 100%;}
@@ -141,7 +140,7 @@
 .main6_logo_panel_card {background-size: cover; background-position: center; color: #121212; 
                         font-family: 'Codec Cold Trial', sans-serif;}
 
-.main6_logo_left {display: flex; flex-direction: column; justify-content: space-between; width: 60%;}
+.main6_logo_left {display: flex; flex-direction: column; justify-content: space-between; width: 60%; margin-left: 5px;}
 
 .main6_logo_title {font-size: 32px; letter-spacing: 1px; font-weight: 800; margin: 5px 0 20px 0;}
 

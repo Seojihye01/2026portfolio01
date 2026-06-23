@@ -44,7 +44,7 @@ const Main_7: React.FC<DirectoryRunButtonProps> = ({ url }) => {
         
         <div className="main7_row_1">
           <h1 className={`main7_title ${isRunning ? 'is_blinking' : ''}`}>
-            PROJECT :: {isRunning ? 'RUNNING ···' : 'RUN'}
+            PROJECT {isRunning ? 'RUNNING ···' : ':: RUN'}
           </h1>
         </div>
 
@@ -58,7 +58,7 @@ const Main_7: React.FC<DirectoryRunButtonProps> = ({ url }) => {
         <div className="main7_row_3">
           <div className="main7_meta_block distance_block">
             <span className="main7_meta_label">DISTANCE : FULL COURSE</span>
-            <span className="main7_meta_value">BIB NO. M-01</span>
+            <span className="main7_meta_value">BIB NO. P-01</span>
           </div>
         </div>
 

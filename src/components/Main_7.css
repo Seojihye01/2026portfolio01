@@ -9,13 +9,13 @@
 .main7_row_1 {width: 100%; display: flex; justify-content: flex-start;}
 
 .main7_title {background: linear-gradient(to right, #121212 20%, #5e5e5e 40%, #ffffff 50%, #5e5e5e 60%, #121212 80%);
-              background-size: 200% auto; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-              animation: main7_shine 4s linear infinite; transition: all 0.3s ease;
-              border: 2px solid #121212; padding: 10px;}
+              background-size: 200% auto; -webkit-background-clip: text; background-clip: text; border-radius: 6px;
+              -webkit-text-fill-color: transparent; border: 3px solid #333; padding: 14px 25px; font-size: 28px;
+              animation: main7_shine 4s linear infinite; transition: all 0.3s ease;}
 
 .main7_title:active {transform: scale(0.95);}
 
-.is_blinking {animation: main7_shine 2s linear infinite;}
+.is_blinking {animation: main7_shine 1.8s linear infinite;}
 
 @keyframes main7_shine { 0% { background-position: 200% center; } 100% { background-position: -200% center; } }
 

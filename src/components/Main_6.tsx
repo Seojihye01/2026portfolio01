@@ -74,8 +74,7 @@ const Main_6: React.FC = () => {
               <div className="main6_logo_left">
                 <h1 className="main6_logo_title">Directory.M</h1>
                 <div className="main6_logo_desc_group">
-                  <p className="main6_logo_desc">A movie archive platform</p>
-                  <p className="main6_logo_desc_sub">— designed for systematic classification and navigation</p>
+                  <p className="main6_logo_desc">— designed for simple shapes and plain layouts</p>
                 </div>
               </div>
 
