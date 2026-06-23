@@ -56,7 +56,7 @@ const Main_6: React.FC = () => {
               <div className="main6_card_body">
                 <h2 className="main6_font_main_print">MONTSERRAT</h2>
                 <p className="main6_font_reason">
-                  To deliver a clean, modern, and refined editorial identity across the platform
+                  Editorial Identity | Modern | Refined | Clean Architecture
                 </p>
               </div>
             

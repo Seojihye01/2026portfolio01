@@ -35,7 +35,7 @@ const Main_7: React.FC<DirectoryRunButtonProps> = ({ url }) => {
       window.open(url, '_blank', 'noopener,noreferrer');
       setIsRunning(false);
       setRuntime('00:00:00');
-    }, 2800);
+    }, 3000);
   };
 
   return (

@@ -67,7 +67,7 @@ const Main_9: React.FC = () => {
         <div className="main9_spec_row m_top_large">
           <div className="main9_spec_label">Mission</div>
           <div className="main9_spec_value">
-            <p className="main9_value_line text_right text_medium">Targeting MZ generation with a kitsch military universe</p>
+            <p className="main9_value_line text_right text_medium">Targeting Z generation with a kitsch military universe</p>
           </div>
         </div>
 

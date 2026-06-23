@@ -3,7 +3,7 @@
 
 .main9_inner {width: 100%; max-width: 1100px;}
 
-.main9_sub_header {display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 24px;}
+.main9_sub_header {display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 5px;}
 
 .main9_sub_left {display: flex; flex-direction: column; align-items: start; gap: 16px;}
 
@@ -107,9 +107,9 @@
   .main9_container {padding: 18px 40px;}
 
   .main9_sub_header {display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; 
-                     gap: 16px; padding-bottom: 16px; width: 100%;}
+                     gap: 16px; padding-bottom: 10px; width: 100%;}
                      
-  .main9_sub_left {gap: 8px; flex: 1;}
+  .main9_sub_left {gap: 10px; flex: 1;}
 
   .main9_sub_label {font-size: 12px; line-height: 1;}
 
@@ -150,11 +150,11 @@
 
   .main9_palette_wrapper {flex-direction: column; align-items: flex-end; gap: 6px;}
 
-  .main9_pack_title {font-size: 11px;}
+  .main9_pack_title {font-size: 10px;}
 
   .main9_pack_text {text-align: left; font-size: 11px; line-height: 1.7;}
 
-  .main9_color_group {justify-content: flex-start;}
+  .main9_color_group {justify-content: flex-start; gap: 6px;}
   
   .main9_color_badge {font-size: 8px; margin-top: 2px;}
 

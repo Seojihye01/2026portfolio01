@@ -23,7 +23,7 @@ const Main_10: React.FC = () => {
 
     // 1초 후 새 탭으로 이동 및 텍스트 복구
     setTimeout(() => {
-      window.open("https://github.com/Seojihye01/2026portfolio01", "_blank", "noopener,noreferrer");
+      window.open("https://github.com/Seojihye01/", "_blank", "noopener,noreferrer");
       setGithubStatus('GIT HUB');
     }, 1000);
   };
@@ -69,7 +69,7 @@ const Main_10: React.FC = () => {
               <span className={`main10_contact_label ${githubStatus === 'VISIT ✔' ? 'active_status' : ''}`}>
                 {githubStatus}
               </span>
-              <p className="main10_contact_value github_url">github.com/Seojihye01/2026portfolio01</p>
+              <p className="main10_contact_value github_url">github.com/Seojihye01/</p>
             </div>
           </a>
         </div>

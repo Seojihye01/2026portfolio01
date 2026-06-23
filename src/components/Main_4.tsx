@@ -62,14 +62,7 @@ const Main_4: React.FC = () => {
             <p className="main4_value_line text_right spacing_wide color_muted">Cinematic / Editorial / Archive / Minimal / Muted</p>
           </div>
         </div>
-
-        <div className="main4_spec_row m_top_large">
-          <div className="main4_spec_label">Mission</div>
-          <div className="main4_spec_value">
-            <p className="main4_value_line text_right text_medium color_dark">Curing choice fatigue from OTT content overload</p>
-          </div>
-        </div>
-
+        
       </div>
     </article>
   );

@@ -10,7 +10,7 @@ const Main_3: React.FC = () => {
   <section className="main3_container" data-theme="light">
     <div className="main3_top_wrapper">
       <div className="main3_track_sidebar">
-        <div className="main3_track_header">[ COURSE INFO ]</div>
+        <div className="main3_track_header">[ COURSE MAP ]</div>
         
         <div className="main3_timeline_wrapper">
           <svg className="timeline_line_svg" viewBox="0 0 100 40" preserveAspectRatio="none">

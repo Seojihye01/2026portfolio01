@@ -13,7 +13,7 @@
 .main5_header_top_bar {width: 100%; border-bottom: 1px dashed rgba(249, 249, 249, 0.1); padding-bottom: 20px;
                        margin-bottom: 30px;}
 
-.main5_header_identity {font-size: 12px; letter-spacing: 0.05em; font-weight: 400; color: rgba(249, 249, 249, 0.6); margin: 0;}
+.main5_header_identity {font-size: 12px; letter-spacing: 0.05em; font-weight: 400; color: rgba(249, 249, 249, 0.75); margin: 0;}
 
 .main5_header_main_grid {display: flex; justify-content: space-between; align-items: center; width: 100%; gap: 40px;}
 

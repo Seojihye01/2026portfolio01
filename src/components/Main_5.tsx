@@ -9,7 +9,6 @@ interface StrategyItem {
 }
 
 
-
 interface StrategyData {
   PROBLEM: StrategyItem;
   RESEARCH: StrategyItem;
@@ -23,12 +22,16 @@ const Main_5: React.FC = () => {
   const [lang, setLang] = useState<'KOR' | 'ENG'>('ENG');
   const [activeTab, setActiveTab] = useState<keyof StrategyData>('PROBLEM');
 
+  const koMission = "목표 : OTT 콘텐츠 과부하로 인한 선택 피로도 해소";
+  const enMission = "Mission : Curing choice fatigue from OTT content overload";
+  const currentMission = lang === 'KOR' ? koMission : enMission;
+
   const koData: StrategyData = {
-    PROBLEM: { id: '01', title: 'PROBLEM', content: '기존 OTT 플랫폼의 무한 스크롤과 자극적인 썸네일 나열식 배치로 인한 콘텐츠 선택 장애 유발 및 이용자의 시각적 피로도 심화' },
-    RESEARCH: { id: '02', title: 'RESEARCH', content: '콘텐츠 탐색 피로도로 인해 실제 시청보다 탐색에 더 많은 시간을 허비하는 ‘넷플릭스 증후군’ 현상 <br /><span class="main5_research_source">글로벌 소비자의 60%가 OTT 검색 과정에서 좌절을 느끼며, 44%는 매번 6분 이상을 허비 <br/>[ Accenture Report ]</span>' },
-    HYPOTHESIS: { id: '03', title: 'HYPOTHESIS', content: '영화의 본질적인 감성과 기획 의도를 매거진 형태의 UI로 정제하여 전달한다면 이용자의 탐색 피로도를 낮추고 플랫폼 몰입도를 증대시킬 것이다' },
-    SOLUTION: { id: '04', title: 'SOLUTION', content: '이용자가 제안된 콘텐츠를 주도적으로 발견하는 즐거움을 느낄 수 있도록 단계별 인터랙티브 플로우를 설계하고 능동적 참여를 통해 결과물에 대한 소유감 부여' },
-    KEY_INSIGHT: { id: '05', title: 'KEY INSIGHT', content: '반응형 UX는 기획단계에서부터 컴포넌트의 가변성과 미디어의 고유 특성을 미리 계산하고 방어하는 설계 역량에서 나온다는 것을 학습' }
+    PROBLEM: { id: '01', title: '문제점', content: '기존 OTT 플랫폼의 무한 스크롤과 자극적인 썸네일 나열식 배치로 인한 콘텐츠 선택 장애 유발 및 이용자의 시각적 피로도 심화' },
+    RESEARCH: { id: '02', title: '연구', content: '콘텐츠 탐색 피로도로 인해 실제 시청보다 탐색에 더 많은 시간을 허비하는 ‘넷플릭스 증후군’ 현상 <br /><span class="main5_research_source">글로벌 소비자의 60%가 OTT 검색 과정에서 좌절을 느끼며, 44%는 매번 6분 이상을 허비 <br/>[ Accenture, "Streaming’s Next Act" ]</span>' },
+    HYPOTHESIS: { id: '03', title: '가설', content: '영화의 본질적인 감성과 기획 의도를 매거진 형태의 UI로 정제하여 전달한다면 이용자의 탐색 피로도를 낮추고 플랫폼 몰입도를 증대시킬 것이다' },
+    SOLUTION: { id: '04', title: '해결책', content: '이용자가 제안된 콘텐츠를 주도적으로 발견하는 즐거움을 느낄 수 있도록 단계별 상호작용 흐름을 설계하고 능동적 참여를 통해 결과물에 대한 소유감 부여' },
+    KEY_INSIGHT: { id: '05', title: '핵심 발견', content: '반응형 UX는 기획단계에서부터 컴포넌트의 가변성과 미디어의 고유 특성을 미리 계산하고 방어하는 설계 역량에서 나온다는 것을 학습' }
   };
 
   const enData: StrategyData = {
@@ -51,7 +54,7 @@ const Main_5: React.FC = () => {
           
           <div className="main5_header_top_bar">
             <p className="main5_header_identity">
-              Directory.M | Premium Cinematic Curation Platform
+              {currentMission} 
             </p>
           </div>
 

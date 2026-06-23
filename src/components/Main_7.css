@@ -1,13 +1,23 @@
 .main7_section {width: 100%; height: 100vh; background-color: #e0e0e0; display: flex; justify-content: center;
                 align-items: center; color: #121212; box-sizing: border-box;}
 
-.main7_track_container {display: flex; flex-direction: column; width: 100%; max-width: 631px; cursor: pointer;
-                        transition: opacity 0.3s ease; padding: 0 40px; margin: 0 auto; position: relative;}
+.main7_track_container {display: flex; flex-direction: column; width: 100%; max-width: 631px; cursor: pointer; padding: 0 40px;
+                        transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); margin: 0 auto; position: relative;}
 
-.main7_title, .main7_project_name {font-size: 40px; font-weight: 700; margin: 0; letter-spacing: 1px;
-                                   line-height: 1; text-transform: uppercase;}
+.main7_title, .main7_project_name {font-size: 40px; font-weight: 700; margin: 0; letter-spacing: 1px; line-height: 1;}
 
 .main7_row_1 {width: 100%; display: flex; justify-content: flex-start;}
+
+.main7_title {background: linear-gradient(to right, #121212 20%, #5e5e5e 40%, #ffffff 50%, #5e5e5e 60%, #121212 80%);
+              background-size: 200% auto; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+              animation: main7_shine 4s linear infinite; transition: all 0.3s ease;
+              border: 2px solid #121212; padding: 10px;}
+
+.main7_title:active {transform: scale(0.95);}
+
+.is_blinking {animation: main7_shine 2s linear infinite;}
+
+@keyframes main7_shine { 0% { background-position: 200% center; } 100% { background-position: -200% center; } }
 
 .main7_row_2 {width: 100%; display: flex; align-items: flex-start; margin-top: 25px; justify-content: space-between;}
 

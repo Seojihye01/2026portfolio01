@@ -68,13 +68,13 @@
 
 .main6_label_card:nth-child(2) .main6_colour_code {color: #999;}
 
-.main6_vertical_text_zone {flex: 1; display: flex; flex-direction: column; align-items: first baseline;
+.main6_vertical_text_zone {flex: 1; display: flex; flex-direction: column; align-items: end;
                            justify-content: flex-start; padding: 30px 0; writing-mode: vertical-lr; 
-                           text-orientation: sideways-right; margin-top: 10px; gap: 5px;}
+                           text-orientation: sideways-right; margin-top: 10px; gap: 5px; transform: rotate(180deg);}
 
-.main6_colour_char {font-size: 10px; letter-spacing: 0.05em; font-weight: 400; color: #999;}
+.main6_colour_char {font-size: 10px; letter-spacing: 0.05em; font-weight: 400; color: #999; padding-bottom: 1px;}
 
-.main6_label_card:nth-child(2) .main6_colour_char {color: #666;}
+.main6_label_card:nth-child(2) .main6_colour_char {color: #999;}
 
 .main6_colour_name {font-size: 18px; letter-spacing: 0.06em; font-weight: 700; margin: 0; line-height: 1;}
 
@@ -107,17 +107,16 @@
 
 .main6_typo_card:hover, .main_typo_card:active {transform: scale(1.03);}
 
-.main6_typo_card.font_montserrat {display: flex; justify-content: space-between; align-items: center; padding: 27px;
+.main6_typo_card.font_montserrat {display: flex; justify-content: space-between; align-items: center; padding: 18px;
                                   position: relative;}
 
-.font_montserrat .main6_card_body {background-color: #121212; color: #F9F9F9; padding: 24px; width: 60%; gap: 14px;
-                                   height: auto; display: flex; flex-direction: column; justify-content: center; 
-                                   position: relative; }
+.font_montserrat .main6_card_body {border: 3.5px solid #121212; padding: 24px; width: 60%; gap: 14px; height: auto; 
+                                   display: flex; flex-direction: column; justify-content: center; position: relative;}
 
 .font_montserrat .main6_font_main_print {position: static; font-size: 20px; letter-spacing: 0.05em; font-weight: 800; 
-                                         color: #f9f9f9; pointer-events: none; margin: 0; line-height: 1;} 
+                                         color: #121212; pointer-events: none; margin: 0; line-height: 1;} 
 
-.main6_font_reason {font-size: 14px; letter-spacing: 0.01em; font-weight: 400; color: #f9f9f9; margin: 0; 
+.main6_font_reason {font-size: 14px; letter-spacing: 0.01em; font-weight: 400; color: #121212; margin: 0; 
                     line-height: 1.6;}
 
 .main6_weight_stack {display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end;
@@ -125,7 +124,7 @@
 
 .main6_stack_line {font-size: 11px; letter-spacing: 0.05em; line-height: 1.2;}
 
-.w_light {font-weight: 300; color: #BBB;}
+.w_light {font-weight: 300; color: #aaa;}
 
 .w_regular {font-weight: 400; color: #999;}
 
@@ -186,9 +185,10 @@
 
   .main6_colour_square {width: 50px; height: 50px; flex-shrink: 0;}
   
-  .main6_colour_code {font-size: 11px; margin: 0; transform: rotate(-90deg) translateY(-10px);}
+  .main6_colour_code {font-size: 9.5px; margin: 0; transform: rotate(-90deg) translateY(-10px);}
 
-  .main6_vertical_text_zone {flex: 1; padding: 0; margin-top: 0; margin-left: 10px; writing-mode: horizontal-tb;}
+  .main6_vertical_text_zone {flex: 1; padding: 0; margin-top: 0; margin-left: 10px; writing-mode: horizontal-tb;
+                             transform: rotate(0deg); align-items: first baseline;}
 
   .main6_colour_name {font-size: 16px; letter-spacing: 0.04em;}
 
@@ -197,18 +197,18 @@
   .main6_zigzag_svg {transform: rotate(-90deg);}
 
   .main6_header {flex-direction: column; align-items: flex-start; margin-bottom: 0; text-align: left;
-                 transform: translateY(-12px);}
+                 transform: translateY(-11px);}
 
-  .main6_main_title {font-size: 20px;}
+  .main6_main_title {font-size: 18px; font-weight: 800;}
   
-  .main6_sub_title {font-size: 11px;}
+  .main6_sub_title {font-size: 10.5px;}
 
   .main6_typo_wrapper {flex-direction: row; gap: 10px; width: 100%;}
 
   .main6_typo_card {flex: 1; flex-direction: column; align-items: stretch; justify-content: space-between;
                     min-height: 330px; padding: 16px 24px; min-width: 100px;}
 
-  .main6_typo_card.font_montserrat {padding: 20px 30px;}
+  .main6_typo_card.font_montserrat {padding: 18px 25px;}
 
   .main6_card_body {padding-left: 0; gap: 12px; align-items: flex-start;}
 
@@ -216,14 +216,13 @@
 
   .font_montserrat .main6_font_main_print {font-size: 14px; margin: 0 0 10px 0; padding-left: 0;}
 
-  .main6_font_reason {margin: 0; font-size: 14px; line-height: 1.7;}
+  .main6_font_reason {margin: 0; font-size: 12px; line-height: 1.7;}
 
-  .main6_weight_stack {position: static; width: 100%; margin-top: auto; border-left: none; 
-                       border-top: 1px dashed rgba(18, 18, 18, 0.15); padding: 0; 
-                       flex-direction: row; flex-wrap: wrap; justify-content: flex-start; 
-                       text-align: left; gap: 0px 6px;}
+  .main6_weight_stack {position: static; width: 100%; margin-top: auto; border-left: none; padding: 0; gap: 0 6px;
+                       border-top: 1px dashed rgba(18, 18, 18, 0.15); flex-direction: row; flex-wrap: wrap; 
+                       justify-content: flex-start; text-align: left; }
 
-  .main6_stack_line {font-size: 11px; white-space: nowrap;}
+  .main6_stack_line {font-size: 10px; white-space: nowrap; line-height: 1.1;}
 
   .main6_logo_panel_card {flex-direction: column; justify-content: space-between; gap: 24px;}
 
