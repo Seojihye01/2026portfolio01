@@ -36,9 +36,9 @@
 .main6_container, .main6_container *, .main6_container *::before, .main6_container *::after {box-sizing: border-box;}
 
 .main6_container {width: 100%; min-height: 100vh; display: flex; justify-content: center; align-items: center;
-                  padding: 60px; background-color: #E5E5E7; color: #121212;}
+                  padding: 60px 70px; background-color: #E5E5E7; color: #121212;}
 
-.main6_inner {width: 100%; max-width: 1200px; display: flex; gap: 40px; align-items: stretch;}
+.main6_inner {width: 100%; max-width: 1200px; display: flex; gap: 14px; align-items: stretch;}
 
 .main6_left_zone {display: flex;}
 

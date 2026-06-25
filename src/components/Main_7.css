@@ -13,6 +13,8 @@
               -webkit-text-fill-color: transparent; border: 3px solid #333; padding: 14px 25px; font-size: 28px;
               animation: main7_shine 4s linear infinite; transition: all 0.3s ease;}
 
+.main7_title:hover, .main7_title:focus-visible {letter-spacing: 0.08em;}
+
 .main7_title:active {transform: scale(0.95);}
 
 .is_blinking {animation: main7_shine 1.8s linear infinite;}

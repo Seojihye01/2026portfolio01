@@ -54,7 +54,7 @@
 .main5_detail_body {min-height: 120px; display: flex; align-items: center;}
 
 .main5_detail_body p {font-size: 16px; font-weight: 400; line-height: 1.8; margin: 0; word-break: keep-all;
-                      color: #f9f9f9; word-break: keep-all;}
+                      color: #f9f9f9;}
 
 .main5_research_source {font-size: 12.5px; font-weight: 300; opacity: 0.6;}
 

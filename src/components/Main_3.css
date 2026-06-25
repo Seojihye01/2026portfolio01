@@ -53,7 +53,7 @@
 
 .main3_bottom_wrapper.initial_hidden {opacity: 0; pointer-events: none;}
 
-.race_content_sheet {width: 100%; max-width: 1200px; margin: 0 auto; padding: 50px 60px; display: flex; flex-direction: column; 
+.race_content_sheet {width: 100%; max-width: 1200px; margin: 0 auto; padding: 50px 75px; display: flex; flex-direction: column; 
                      transition: opacity 0.3s ease;}
 
 .main3_sheet_header {display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 15px;
@@ -102,7 +102,9 @@
 
   .main3_timeline_wrapper {margin-left: 10px; margin-bottom: 15px;}
   
-  .race_content_sheet {padding: 20px 40px;}
+  .node_dot {width: 8px; height: 8px;}
+
+  .race_content_sheet {padding: 20px 45px;}
 
   .main3_sheet_header {padding-bottom: 15px; margin-bottom: 20px;}
 
