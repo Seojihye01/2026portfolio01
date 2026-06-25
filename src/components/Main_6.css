@@ -248,7 +248,7 @@
 
   .main6_typo_wrapper {flex-direction: column;}
 
-  .main6_typo_card {min-height: 36px;}
+  .main6_typo_card {min-height: auto;}
 
   .font_montserrat .main6_card_body {padding: 16px 22px; height: auto;}
 

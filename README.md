@@ -1,75 +1,16 @@
-# React + TypeScript + Vite
+# Directory.M (영화 큐레이션 및 ESG 거버넌스 플랫폼)
+> AI 기반 인터랙션과 데이터 투명성을 강조한 개인 웹 퍼블리싱 & UX/UI 포트폴리오 프로젝트입니다.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1. 제작 기간 & 참여도
+- 2026.01 ~ 2026.05 (약 5개월)
+- 개인 프로젝트 (기획, 디자인, 퍼블리싱 100%)
 
-Currently, two official plugins are available:
+## 2. 사용 기술 스택
+- **Frontend:** React, TypeScript, CSS3
+- **Libraries:** Framer Motion, Intersection Observer
+- **Design & AI:** Illustrator, Figma, Gemini, ChatGPT
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 3. 핵심 기능 및 구현 내용
+- **Elevator Nav:** 스크롤 위치에 따른 섹션 감지(Intersection Observer) 및 다크/라이트 테마 자동 동기화
+- **Experience Flow:** 다국어(KOR/ENG) 실시간 컴포넌트 스위칭 및 비디오 목업 인터랙션
+- **Runtime Tracker:** 인터랙티브한 타이머 구동 시스템 및 비동기 페이지 렌더링

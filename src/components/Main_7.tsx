@@ -43,8 +43,10 @@ const Main_7: React.FC<DirectoryRunButtonProps> = ({ url }) => {
       <div className="main7_track_container" onClick={handleRun}>
         
         <div className="main7_row_1">
-          <h1 className={`main7_title ${isRunning ? 'is_blinking' : ''}`}>
-            PROJECT {isRunning ? 'RUNNING ···' : ':: RUN'}
+          <h1 className="main7_title">
+            <span className={`main7_text ${isRunning ? 'is_blinking' : ''}`}>
+              PROJECT {isRunning ? 'RUNNING ···' : ':: RUN'}
+            </span>
           </h1>
         </div>
 

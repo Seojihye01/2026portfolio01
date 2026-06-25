@@ -84,8 +84,6 @@
 
   .main8_logic_area {max-width: 100%;}
 
-  .main8_logic_item {text-align: center;}
-
 }
 
 /* 2. 모바일(768px 이하) */
@@ -93,7 +91,7 @@
 
   .main8_flow_set {padding: 0 70px;}
 
-  .main8_title {font-size: 18px;}
+  .main8_title {font-size: 16px;}
 
   .main8_top_lang_toggle {font-size: 13px;}
 
