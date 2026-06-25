@@ -70,3 +70,27 @@
   .main7_meta_value {font-size: 12.5px;}
 
 }
+
+
+
+
+.main7_title {
+  /* [수정] 첫 번째 그라디언트는 글자용(text), 두 번째 그라디언트는 버튼 기본 배경색(#121212)으로 레이어를 나눕니다 */
+  background: 
+    linear-gradient(to right, #121212 20%, #5e5e5e 40%, #ffffff 50%, #5e5e5e 60%, #121212 80%),
+    linear-gradient(#121212, #121212);
+  
+  background-size: 200% auto, 100% auto;
+  color: transparent;
+  /* [수정] background-clip을 text와 element(border-box) 각각 대응하도록 지정합니다 */
+  -webkit-background-clip: text, border-box;
+  background-clip: text, border-box; 
+  
+  border-radius: 6px;
+  -webkit-text-fill-color: transparent; 
+  border: 3px solid #333; 
+  padding: 14px 25px; 
+  font-size: 28px;
+  animation: main7_shine 4s linear infinite; 
+  transition: all 0.3s ease;
+}

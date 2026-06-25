@@ -80,9 +80,11 @@
 
   .main8_content_zone {padding: 30px 40px; gap: 24px;}
 
-  .main8_mockup_body {max-width: 65%;}
+  .main8_mockup_body {max-width: 100%;}
 
-  .main8_logic_area {max-width: 65%;}
+  .main8_logic_area {max-width: 100%;}
+
+  .main8_logic_item {text-align: center;}
 
 }
 
@@ -97,8 +99,8 @@
 
   .main8_side {padding: 30px 0;}
 
-  .main8_mockup_body {max-width: 90%;}
+  .main8_mockup_body {max-width: 100%;}
 
-  .main8_logic_area {max-width: 90%;}
+  .main8_logic_area {max-width: 100%;}
 
 }
