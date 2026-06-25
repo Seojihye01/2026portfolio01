@@ -10,7 +10,7 @@
 
 .main7_title {background: linear-gradient(to right, #121212 20%, #5e5e5e 40%, #ffffff 50%, #5e5e5e 60%, #121212 80%);
               background-size: 200% auto; -webkit-background-clip: text; background-clip: text; border-radius: 6px;
-              -webkit-text-fill-color: transparent; border: 3px solid #333; padding: 14px 25px; font-size: 28px;
+              -webkit-text-fill-color: transparent; border: 3px solid #222; padding: 14px 25px; font-size: 28px;
               animation: main7_shine 4s linear infinite; transition: all 0.3s ease;}
 
 .main7_title:hover, .main7_title:focus-visible {letter-spacing: 0.08em;}
