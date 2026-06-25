@@ -63,7 +63,7 @@
 
   .main7_title, .main7_project_name {font-size: 25px;}
 
-  .main7_title {font-size: 16px;}
+  .main7_title {font-size: 16px; border: 2px solid #333;}
 
   .main7_meta_label {font-size: 10.5px;}
 

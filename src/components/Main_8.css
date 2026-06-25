@@ -89,13 +89,15 @@
 /* 2. 모바일(768px 이하) */
 @media (max-width: 768px) {
 
-  .main8_flow_set {padding: 0 70px;}
+  .main8_flow_set {padding: 0 53px;}
 
   .main8_title {font-size: 16px;}
 
   .main8_top_lang_toggle {font-size: 13px;}
 
-  .main8_side {padding: 30px 0;}
+  .main8_side {padding: 20px 0;}
+
+  .main8_content_zone {padding: 20px 30px; gap: 20px;}
 
   .main8_mockup_body {max-width: 100%;}
 
