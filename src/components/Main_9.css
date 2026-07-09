@@ -111,13 +111,13 @@
                      
   .main9_sub_left {gap: 10px; flex: 1;}
 
-  .main9_sub_label {font-size: 12px; line-height: 1;}
+  .main9_sub_label {font-size: 11px; line-height: 1;}
 
   .main9_sub_tag {font-size: 10px; line-height: 1; margin-top: 1;}
 
   .title_section {text-align: right;}
 
-  .main9_main_title {font-size: 17px; letter-spacing: 0.02em; line-height: 1.1;}
+  .main9_main_title {font-size: 16px; letter-spacing: 0.02em; line-height: 1.1;}
 
   .main9_sub_right {display: flex; flex-direction: row; justify-content: space-between; align-items: center;
                     width: 100%; margin: 8px 0 20px; border-top: 1px dashed rgba(18, 18, 18, 0.1); 
