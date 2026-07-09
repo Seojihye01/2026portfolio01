@@ -1,75 +1,130 @@
-.main10_container {width: 100%; height: 100vh; padding: 80px 30px 40px; background-color: #dddddf; color: #121212; 
-                  display: flex; justify-content: center; align-items: center; box-sizing: border-box;}
+.main10_container {width: 100%; height: 100vh; margin: 0 auto; padding: 30px 80px; background-color: #f9f9f9; 
+                   color: #121212; box-sizing: border-box; display: flex; justify-content: center;}
 
-.main10_inner {width: 100%; max-width: 1200px; height: 100%; position: relative;}
+.main10_inner {width: 100%; max-width: 1100px;}
 
-.main10_top_left, .main10_thank_text, .main10_brand_name, .main10_contact_content1,
-.main10_contact_content2, .main10_bottom_right {font-size: 16px; font-weight: 400;}
+.main10_sub_header {display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 5px;}
 
-.main10_top_left {display: flex; flex-direction: column; position: absolute; top: 0%; left: 3%;
-                 font-weight: 500; line-height: 1.8;}
+.main10_sub_left {display: flex; flex-direction: column; align-items: start; gap: 16px;}
 
-.main10_sub_title {font-size: 13px; font-weight: 400;}
+.main10_sub_label {font-size: 17px; line-height: 1;}
 
-.main10_top_right {position: absolute; top: 10%; right: 5%; text-align: center; line-height: 1.8;}
+.main10_sub_tag {font-size: 11px; font-weight: 300; color: #888; line-height: 2;}
 
-.main10_thank_text {font-size: 15px;}
+.main10_sub_tag.bold {font-weight: 500;}
 
-.main10_centre {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.main10_main_title {font-size: 32px; font-weight: 700; letter-spacing: 1px; line-height: 1;}
 
-.main10_brand_name {font-size: 30px; font-weight: 800;}
+.main10_sub_right {display: flex; flex-direction: column; align-items: flex-end; gap: 10px; text-align: right;}
 
-.main10_contact_content1 {position: absolute; bottom: 0; left: 0;}
+.main10_sub_meta {font-size: 12.5px; color: #666; line-height: 1;}
 
-.main10_contact_content2 {position: absolute; bottom: 0; left: 0;}
+.text_bold {font-size: 15px; font-weight: 500;}
 
-.main10_bottom_left {position: absolute; bottom: 0; left: 0; display: flex; flex-direction: column; gap: 10px;}
+.main10_hero_visual_bar {width: 100%; height: 160px; background: #000; margin: 15px 0 35px 0; display: flex; 
+                         justify-content: center; align-items: center; position: relative; overflow: hidden;
+                         box-shadow: 0 10px 30px rgba(18, 18, 18, 0.08);}
 
-.main10_contact_box {position: relative; width: 280px; padding: 35px 24px; box-sizing: border-box; cursor: pointer;
-                    text-decoration: none; color: inherit; display: block;}
+.main10_img_container {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;}
 
-.main10_contact_box:hover, .main10_contact_box:active {transform: scale(1.05);}
+.main10_img_container img {width: 100%; height: 100%; object-fit: cover; object-position: center center; 
+                          display: block; transform: scale(0.4) translateY(145px);}
 
-.main10_frame_corner {position: absolute; font-size: 16px; line-height: 1; font-weight: 300; user-select: none;}
+.main10_section_divider {border: none; border-top: 1px solid rgba(18, 18, 18, 0.15); margin-bottom: 45px;}
 
-.top_left {top: 0; left: 0;}
+.main10_spec_sheet {width: 100%; display: flex; flex-direction: column; gap: 12px;}
 
-.top_right {top: 0; right: 0;}
+.main10_spec_row {display: flex; justify-content: space-between; align-items: flex-start; width: 100%;
+                  border-bottom: 1px dashed rgba(18, 18, 18, 0.1); padding-bottom: 10px;}
 
-.bottom_left {bottom: 0; left: 0;}
+.main10_spec_label {width: 200px; font-size: 14px; font-weight: 500; line-height: 1.5; text-transform: uppercase;}
 
-.bottom_right {bottom: 0; right: 0;}
+.main10_spec_value {flex: 1; display: flex; flex-direction: column; align-items: flex-end;}
 
-.main10_contact_inner_content {display: flex; flex-direction: column; align-items: flex-end; text-align: right; width: 100%;}
+.main10_value_line {font-size: 14px; font-weight: 400; color: #333; line-height: 2; text-align: right; width: 75%;}
 
-.main10_contact_label {font-size: 11px; color: #666; font-weight: 400; margin-bottom: 10px; letter-spacing: 0.05em;}
+.main10_value_line.text_small {font-size: 12.5px; line-height: 2;}
 
-.main10_contact_value {font-size: 13.5px; font-weight: 400; margin: 0;}
+.main10_value_line.text_medium {line-height: 2;}
 
-.main10_bottom_right {position: absolute; bottom: 20%; right: 15%; text-align: left; color: #888;}
+.pack_gap_control {display: flex; flex-direction: column; gap: 12px; width: 100%;}
 
-.main10_credit_text {font-size: 13.5px; font-weight: 400; line-height: 1.7; margin: 0;}
+.main10_value_set {display: flex; flex-direction: row; justify-content: flex-end;  align-items: center; gap: 16px;
+                  width: 100%;}
+
+.main10_pack_title {font-size: 12.5px; color: #777; font-weight: 400; white-space: nowrap;}
+
+.main10_pack_text {font-size: 14px; font-weight: 400; color: #333; text-align: right; margin: 0; line-height: 1.5;}
+
+.color_dark {font-size: 12.5px; color: #777; font-weight: 400;}
+
+.color_muted {color: #777;}
+
+.spacing_wide {letter-spacing: 0.05em;}
+
+.m_top_large {margin-top: 10px;}
 
 /* Responsive Design */
-/* 1. 모바일 (768px 이하) */
+/* 1. 태블릿(1024px 이하) */
+@media screen and (max-width: 1024px) {
+
+  .main10_container {padding: 20px 50px;}
+
+  .main10_main_title {font-size: 28px;}
+
+  .main10_value_line {width: 104%;}
+
+}
+
+/* 2. 모바일(768px 이하) */
 @media screen and (max-width: 768px) {
 
-  .main10_container {height: auto; min-height: 100vh; padding: 60px 40px; overflow: visible;}
-  
-  .main10_inner {display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 60px; height: auto;}
-  
-  .main910_top_left, .main10_top_right, .main10_centre, 
-  .main10_bottom_left, .main10_bottom_right {position: static; transform: none; text-align: center; width: 100%; display: flex;
-                                             flex-direction: column; align-items: center;}
-  
-  .main10_top_right {align-items: flex-end; text-align: right;}
+  .main10_container {padding: 18px 40px;}
 
-  .main10_bottom_right, .main10_contact_inner_content {text-align: center; align-items: center;}
+  .main10_sub_header {display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; 
+                      gap: 16px; padding-bottom: 10px; width: 100%;}
+                     
+  .main10_sub_left {gap: 10px; flex: 1;}
+
+  .main10_sub_label {font-size: 12px; line-height: 1;}
+
+  .main10_sub_tag {font-size: 10px; line-height: 1; margin-top: 1;}
+
+  .title_section {text-align: right;}
+
+  .main10_main_title {font-size: 17px; letter-spacing: 0.02em; line-height: 1.1;}
+
+  .main10_sub_right {display: flex; flex-direction: row; justify-content: space-between; align-items: center;
+                     width: 100%; margin: 8px 0 20px; border-top: 1px dashed rgba(18, 18, 18, 0.1); 
+                     padding-top: 8px;}
+
+  .main10_sub_meta {font-size: 10.5px; line-height: 1;}
+
+  .text_bold {font-size: 11.5px;}
+
+  .main10_hero_visual_bar {height: 120px; margin: 10px 0 24px 0;}
+
+  .main10_img_container img {transform: scale(0.4) translateY(105px);}
+
+  .main10_section_divider {margin-bottom: 24px;}
+
+  .main10_spec_sheet {gap: 10px;}
+
+  .main10_spec_row {flex-direction: column; align-items: flex-start; gap: 8px; border: none;}
+
+  .main10_spec_label {width: 100%; font-size: 10px; color: #888; border-bottom: 1px dashed rgba(18, 18, 18, 0.1);
+                      padding-bottom: 4px;}
+
+  .main10_spec_value {width: 100%; align-items: flex-start;}
+
+  .main10_value_line {font-size: 11px; line-height: 1.7; width: 100%;}
   
-  .main10_contact_box {width: 100%; max-width: 350px;}
+  .m_top_large {margin-top: 0;}
 
-  .main10_contact_value {font-size: 12.5px;}
+  .main10_value_set {flex-direction: column; align-items: flex-end; gap: 4px;}
 
-  .main10_credit_text {font-size: 12.5px;}
+  .main10_pack_title {font-size: 10px;}
+
+  .main10_pack_text {text-align: left; font-size: 11px; line-height: 1.7;}
 
 }

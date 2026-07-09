@@ -92,15 +92,37 @@ const TRACK_DATA: TrackContent[] = [
       logics: [
         '클래퍼보드 컨셉의 스크롤 잠금 트랩 구현',
         '커스텀 커서 카운트다운 및 액션 트리거 설계',
-        '영화적 상호작용을 통한 관객 참여형 UI 유도'
+        '영화적 상호작용을 통한 이용자 참여형 UI 유도'
       ]
     },
     en: {
-      subTitle: '#TAKE01',
+      subTitle: 'TAKE #01',
       logics: [
         'Clapper Board Concept / Scroll-Lock Trap',
         'Custom Cursor Countdown & Action Trigger',
-        'Audience Participation Through Cinematic Interaction'
+        'User Participation Through Cinematic Interaction'
+      ]
+    }
+  },
+  {
+    id: 'track05',
+    trackNum: 'TRACK 05',
+    menuTitle: 'MY SPACE',
+    videoSrc: '/media/pf_5.mp4', 
+    ko: {
+      subTitle: 'Personal Directory',
+      logics: [
+        '이케아 효과(IKEA Effect)를 적용한 능동적 타임라인 탐색 및 데이터 소유감 부여',
+        '달력형 그래픽 UI를 통한 과거 기록 발굴 및 플랫폼 체류 시간 극대화',
+        '개인화된 넘버링·별점 시스템과 SNS 공유 메커니즘을 통한 자발적 바이럴 유도'
+      ]
+    },
+    en: {
+      subTitle: 'My Space Archive',
+      logics: [
+        'IKEA Effect-Driven Active Timeline Exploration and Data Ownership',
+        'Maximised Retention via Calendar-Based Graphic Interface for Historic Records',
+        'Organic Word-of-Mouth via Custom Numbering, Star Ratings, and Social Sharing'
       ]
     }
   }

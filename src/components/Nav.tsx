@@ -20,8 +20,9 @@ const Nav = ({ isMenuOpen }: NavProps) => {
         { id: 'visual', label: '06 | VISUAL KIT' },
         { id: 'live', label: '07 | LIVE RUN' },
         { id: 'logic', label: '08 | EXPERIENCE FLOW' },
-        { id: 'proj2', label: '09 | SUB RACE' },
-        { id: 'finish', label: '10 | FINISH LINE' }
+        { id: 'proj2_1', label: '09 | SUB RACE #1' },
+        { id: 'proj2_2', label: '10 | SUB RACE #2' },
+        { id: 'finish', label: '11 | FINISH LINE' }
     ];
 
     useEffect(() => {

@@ -8,6 +8,7 @@ import Main_7 from './Main_7';
 import Main_8 from './Main_8';
 import Main_9 from './Main_9';
 import Main_10 from './Main_10';
+import Main_11 from './Main_11';
 
 
 
@@ -23,8 +24,9 @@ const Main_wrapper =() => {
         <div id='visual'><Main_6/></div>
         <div id='live'><Main_7 url="https://seojihye-directorym.vercel.app/"/></div>
         <div id='logic'><Main_8/></div>
-        <div id='proj2'><Main_9/></div>
-        <div id='finish'><Main_10/></div>
+        <div id='proj2_1'><Main_9/></div>
+        <div id='proj2_2'><Main_10/></div>
+        <div id='finish'><Main_11/></div>
  
         </div>
     );

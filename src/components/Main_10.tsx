@@ -1,85 +1,89 @@
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import './Main_10.css';
 
 const Main_10: React.FC = () => {
-  const [emailStatus, setEmailStatus] = useState<'EMAIL' | 'COPY ✔'>('EMAIL');
-  const [githubStatus, setGithubStatus] = useState<'GIT HUB' | 'VISIT ✔'>('GIT HUB');
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText('jihyeseo0801@gmail.com');
-    setEmailStatus('COPY ✔');
-
-    setTimeout(() => {
-      setEmailStatus('EMAIL');
-    }, 2000);
-  };
-
-  const handleGithubClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault(); // 즉시 이동하는 기본 동작 차단
-    
-    if (githubStatus === 'VISIT ✔') return; // 이미 클릭했다면 중복 방지
-
-    setGithubStatus('VISIT ✔');
-
-    // 1초 후 새 탭으로 이동 및 텍스트 복구
-    setTimeout(() => {
-      window.open("https://github.com/Seojihye01/", "_blank", "noopener,noreferrer");
-      setGithubStatus('GIT HUB');
-    }, 1000);
-  };
-
+  useEffect(() => {
+      if (videoRef.current) {
+        videoRef.current.play().catch((error) => {
+          console.log("Muted autoplay initiated:", error);
+          if (videoRef.current) {
+            videoRef.current.muted = true;
+            videoRef.current.play();
+          }
+        });
+      }
+    }, []);
+  
   return (
-    <section className="main10_container" data-theme="light">
+    <article className="main10_container" data-theme="light">
       <div className='main10_inner'>
-        
-        <div className="main10_top_left">
-          <span className="main10_date">JUNE 07, 2026</span>
-          <span className="main10_sub_title">PROJ NO. 01</span>
-        </div>
-
-        <div className="main10_top_right">
-          <h2 className="main10_thank_text">THANK YOU <br />FOR WATCHING</h2>
-        </div>
-
-        <div className="main10_centre">
-          <h1 className="main10_brand_name">SEO JIHYE</h1>
-        </div>
-
-        <div className="main10_bottom_left">
-          
-          <div className="main10_contact_box" onClick={handleCopyEmail} title="Click to Copy Email">
-            <span className="main10_frame_corner top_left">┌</span>
-            <span className="main10_frame_corner top_right">┐</span>
-            <span className="main10_frame_corner bottom_left">└</span>
-            <span className="main10_frame_corner bottom_right">┘</span>
-            <div className="main10_contact_inner_content">
-              <span className={`main10_contact_label ${emailStatus === 'COPY ✔' ? 'active_status' : ''}`}>
-                {emailStatus}
-              </span>
-              <p className="main10_contact_value">jihyeseo0801@gmail.com</p>
-            </div>
+      <header className="main10_sub_header">
+        <div className="main10_sub_left">
+          <span className="main10_sub_label">Distance : Half Course</span>
+          <div className='main10_sub_set'>
+            <p className="main10_sub_tag bold">Personal Project</p>
           </div>
+        </div>
+        <div className="main10_title_section">
+          <h1 className="main10_main_title">GENTLE MONSTER</h1>
+        </div>
+      </header>
+      <p className="main10_sub_tag">UX UI Design / Branding</p>
 
-          <a href="https://github.com/Seojihye01/2026portfolio01" onClick={handleGithubClick} className="main10_contact_box link_box">
-            <span className="main10_frame_corner top_left">┌</span>
-            <span className="main10_frame_corner top_right">┐</span>
-            <span className="main10_frame_corner bottom_left">└</span>
-            <span className="main10_frame_corner bottom_right">┘</span>
-            <div className="main10_contact_inner_content">
-              <span className={`main10_contact_label ${githubStatus === 'VISIT ✔' ? 'active_status' : ''}`}>
-                {githubStatus}
-              </span>
-              <p className="main10_contact_value github_url">github.com/Seojihye01/</p>
-            </div>
-          </a>
+      <div className="main10_sub_right">
+        <span className="main10_sub_meta">Duration : 1D (25.07)</span>
+        <span className="main10_sub_meta text_bold">BIB NO. P-03</span>
+      </div>
+
+      <div className="main10_hero_visual_bar">
+        <div className="main10_img_container">
+          <img src='/media/mini_proj2.png' />
+        </div>
+      </div>
+
+      <hr className="main10_section_divider" />
+
+      <div className="main10_spec_sheet">
+        
+        <div className="main10_spec_row">
+          <div className="main10_spec_label">System Core</div>
+          <div className="main10_spec_value">
+            <p className="main10_value_line text_right">Figma / Chat GPT</p>
+          </div>
         </div>
 
-        <div className="main10_bottom_right">
-          <p className="main10_credit_text">PORTFOLIO DESIGN <br />BY SEO JIHYE</p>
+        <div className="main10_spec_row m_top_large">
+          <div className="main10_spec_label">Identity</div>
+          <div className="main10_spec_value">
+            <p className="main10_value_line text_right text_medium">Conceptual Summer Collection Campaign</p>
+            <p className="main10_value_line text_right spacing_wide color_muted">Wild / High-contrast Minimalism / Structural Grid</p>
+          </div>
+        </div>
+
+        <div className="main10_spec_row m_top_large">
+          <div className="main10_spec_label">Mission</div>
+          <div className="main10_spec_value">
+            <p className="main10_value_line text_right text_medium">Creating a summer campaign with Gentle Monster's identity</p>
+          </div>
+        </div>
+
+        <div className="main10_spec_row m_top_large">
+          <div className="main10_spec_label">Visual kit spec</div>
+          <div className="main10_spec_value pack_gap_control">
+            
+            <div className='main10_value_set'>
+              <span className="main10_pack_title">[ FONT ]</span>
+              <p className="main10_pack_text text_medium">Marines Bold, Paperlogy</p>
+            </div>
+
+          </div>
         </div>
 
       </div>
-    </section>
+      </div>
+    </article>
   );
 };
 
