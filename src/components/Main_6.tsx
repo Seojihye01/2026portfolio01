@@ -4,7 +4,7 @@ import './Main_6.css';
 const Main_6: React.FC = () => {
   const colors = [
     { code: '#121212', char: 'Cinematic Contrast', name: 'GRAPHITE', className: 'main6_bg_graphite' },
-    { code: '#F9F9F9', char: 'Cinematic Contrast', name: 'CLOUD WHITE', className: 'main6_bg_white' },
+    { code: '#F4F4F4', char: 'Cinematic Contrast', name: 'CLOUD WHITE', className: 'main6_bg_white' },
     { code: '#999999', char: 'Neutral Balance', name: 'PLATINUM GREY', className: 'main6_bg_grey' },
     { code: '#1090BF', char: 'Visual Anchor', name: 'OCEAN BLUE', className: 'main6_bg_blue' },
   ];

@@ -42,7 +42,7 @@ const Nav = ({ isMenuOpen }: NavProps) => {
             { threshold: 0.5 } // 섹션이 절반 이상 보일 때 변경
         );
 
-        const sectionElements = document.querySelectorAll('[data-theme], #start, #slogan, #profile, #proj1, #strategy, #visual, #logic, #live, #proj2, #finish');
+        const sectionElements = document.querySelectorAll('[data-theme], #start, #slogan, #profile, #proj1, #strategy, #visual, #logic, #live, #proj2_1, #proj2_2, #finish');
         sectionElements.forEach((el) => observer.observe(el));
 
         return () => observer.disconnect();
