@@ -31,10 +31,11 @@ const Main_4: React.FC = () => {
           </div>
         </header>
         <p className="main4_sub_tag role">Web Publishing / UX UI Design / Branding</p>
+        <span className="main4_sub_meta">Duration : 6M (25.12 - 26.05)</span>
 
         <div className="main4_sub_right">
-            <span className="main4_sub_meta">Duration : 6M (25.12 - 26.05)</span>
             <span className="main4_sub_meta text_bold">BIB NO. P-01</span>
+            <a href="https://www.figma.com/design/HK6IkR5ibYgmVfeZhmCvfF/Directory.M?node-id=0-1&t=L9c5qvcvVN1uBlNc-1" target="_blank">MORE INFO ↗</a>
         </div>
 
         <div className="main4_hero_visual_bar">

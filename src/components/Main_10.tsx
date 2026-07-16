@@ -31,12 +31,13 @@ const Main_10: React.FC = () => {
         </div>
       </header>
       <p className="main10_sub_tag">UX UI Design / Branding</p>
+      <span className="main10_sub_meta">Duration : 1D (25.07)</span>
 
       <div className="main10_sub_right">
-        <span className="main10_sub_meta">Duration : 1D (25.07)</span>
         <span className="main10_sub_meta text_bold">BIB NO. P-03</span>
+        <a href="https://www.figma.com/design/K5qAE0v9x7kNSWCWSr1TBk/Gentle-Monster?node-id=2-51&t=cA9jBjLRNih6jzjQ-1" target="_blank">MORE INFO ↗</a>
       </div>
-
+                
       <div className="main10_hero_visual_bar">
         <div className="main10_img_container">
           <img src='/media/mini_proj2.png' />

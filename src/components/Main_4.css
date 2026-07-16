@@ -19,7 +19,12 @@
 .main4_sub_right {display: flex; flex-direction: column; align-items: flex-end; gap: 10px; 
                   text-align: right; padding-top: 10px;}
 
-.main4_sub_meta {font-size: 12.5px; color: #666; line-height: 1;}
+.main4_sub_meta {font-size: 11px; color: #666; line-height: 2;}
+
+.main4_sub_right a {text-decoration: underline; text-underline-offset: 3px; font-size: 10px; 
+                    color: #333; transition: color 0.2s ease;}
+
+.main4_sub_right a:hover {color: #999;}
 
 .text_bold {font-size: 15px; font-weight: 500;}
 
@@ -87,6 +92,8 @@
   .main4_sub_meta {font-size: 10.5px; line-height: 1;}
 
   .text_bold {font-size: 11.5px;}
+  
+  .main4_sub_right a {font-size: 9px; white-space: nowrap;}
 
   .main4_hero_visual_bar {height: 120px; margin: 10px 0 24px 0;}
 
