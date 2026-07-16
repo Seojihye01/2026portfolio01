@@ -35,7 +35,7 @@ const Main_4: React.FC = () => {
 
         <div className="main4_sub_right">
             <span className="main4_sub_meta text_bold">BIB NO. P-01</span>
-            <a href="https://www.figma.com/design/HK6IkR5ibYgmVfeZhmCvfF/Directory.M?node-id=0-1&t=L9c5qvcvVN1uBlNc-1" target="_blank">MORE INFO ↗</a>
+            <a href="https://www.figma.com/design/HK6IkR5ibYgmVfeZhmCvfF/Directory.M?node-id=0-1&t=L9c5qvcvVN1uBlNc-1" target="_blank">MORE INFO ↗&#xFE0E;</a>
         </div>
 
         <div className="main4_hero_visual_bar">
