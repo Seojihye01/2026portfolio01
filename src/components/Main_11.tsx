@@ -33,7 +33,7 @@ const Main_11: React.FC = () => {
       <div className='main11_inner'>
         
         <div className="main11_top_left">
-          <span className="main11_date">JULY 16, 2026</span>
+          <span className="main11_date">JULY 22, 2026</span>
           <span className="main11_sub_title">PROJ NO. 01</span>
         </div>
 

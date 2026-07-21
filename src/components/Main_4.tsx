@@ -60,8 +60,8 @@ const Main_4: React.FC = () => {
           <div className="main4_spec_row m_top_large">
             <div className="main4_spec_label">Identity</div>
             <div className="main4_spec_value">
-              <p className="main4_value_line text_right text_medium color_dark">Premium Cinematic Curation Platform</p>
-              <p className="main4_value_line text_right spacing_wide color_muted">Cinematic / Editorial / Archive / Minimal / Muted</p>
+              <p className="main4_value_line text_right text_medium color_dark">Cinematic Content Hub</p>
+              <p className="main4_value_line text_right spacing_wide color_muted">Curated / Editorial / Archive / Minimal / Muted</p>
             </div>
           </div>
         

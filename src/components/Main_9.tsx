@@ -31,9 +31,9 @@ const Main_9: React.FC = () => {
         </div>
       </header>
       <p className="main9_sub_tag">Web Publishing / UX UI Design / Branding</p>
+      <span className="main9_sub_meta">Duration : 1D (25.12)</span>
 
       <div className="main9_sub_right">
-        <span className="main9_sub_meta">Duration : 1D (25.12)</span>
         <span className="main9_sub_meta text_bold">BIB NO. P-02</span>
       </div>
 

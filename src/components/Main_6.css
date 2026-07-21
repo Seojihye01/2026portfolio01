@@ -105,7 +105,7 @@
                   align-items: stretch; position: relative; box-shadow: 0 4px 15px rgba(18, 18, 18, 0.03);
                   cursor: pointer; transition: transform 0.2s ease;}
 
-.main6_typo_card:hover, .main_typo_card:active {transform: scale(1.03);}
+.main6_typo_card:hover, .main_typo_card:active {transform: scale(1.01);}
 
 .main6_typo_card.font_montserrat {display: flex; justify-content: space-between; align-items: center; padding: 18px;
                                   position: relative;}
