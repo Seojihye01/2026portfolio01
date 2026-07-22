@@ -8,7 +8,7 @@
 
 .main7_row_1 {width: 100%; display: flex; justify-content: flex-start;}
 
-.main7_title {display: inline-flex; justify-content: center; align-items: center; width: 280px; height: 52px; 
+.main7_title {display: inline-flex; justify-content: center; align-items: center; width: 300px; height: 52px; 
               box-sizing: border-box; border-radius: 6px; 
               background: linear-gradient(to right, #121212 20%, #5e5e5e 40%, #ffffff 50%, #5e5e5e 60%, #121212 80%);
               background-size: 200% auto; -webkit-background-clip: text; background-clip: text; 
