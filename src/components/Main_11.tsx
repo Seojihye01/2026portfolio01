@@ -76,6 +76,7 @@ const Main_11: React.FC = () => {
 
         <div className="main11_bottom_right">
           <p className="main11_credit_text">PORTFOLIO DESIGN <br />BY SEO JIHYE</p>
+          <a href="https://www.figma.com/design/Ssy4u5CGgkodH9E9mo8XQm/2026_Portfolio01?node-id=0-1&t=yO1679EVzMayboML-1" target="_blank">MORE INFO ↗&#xFE0E;</a>
         </div>
 
       </div>

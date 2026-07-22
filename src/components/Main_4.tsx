@@ -31,7 +31,7 @@ const Main_4: React.FC = () => {
           </div>
         </header>
         <p className="main4_sub_tag role">Web Publishing / UX UI Design / Branding</p>
-        <span className="main4_sub_meta">Duration : 6M (25.12 - 26.05)</span>
+        <span className="main4_sub_meta">Duration : 7M (25.12 - 26.07)</span>
 
         <div className="main4_sub_right">
             <span className="main4_sub_meta text_bold">BIB NO. P-01</span>
