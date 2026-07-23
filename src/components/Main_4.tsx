@@ -65,6 +65,13 @@ const Main_4: React.FC = () => {
             </div>
           </div>
         
+          <div className="main4_spec_row">
+            <div className="main4_spec_label">Route</div>
+            <div className="main4_spec_value">
+              <p className="main4_value_line text_right">11(Main / About / Curation / Explore / Funding / Membership / Funding_Example / Player / Login / Signup / Myspace)</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </article>
