@@ -23,7 +23,7 @@ const Main_4: React.FC = () => {
           <div className="main4_sub_left">
             <span className="main4_sub_label">Distance : Full Course</span>
             <div className='main4_sub_set'>
-              <p className="main4_sub_tag bold">Personal Project</p>
+              <p className="main4_sub_tag bold">Personal Project, 100%</p>
             </div>
           </div>
           <div className="main4_title_section">
