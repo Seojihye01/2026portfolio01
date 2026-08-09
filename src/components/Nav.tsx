@@ -14,16 +14,15 @@ const Nav = ({ isMenuOpen }: NavProps) => {
     const sections = [
         { id: 'start', label: '01 | START LINE' },
         { id: 'slogan', label: '02 | SLOGAN' },
-        { id: 'profile', label: '03 | RACE INFO CENTRE' },
+        { id: 'live', label: '03 | LIVE RUN' },
         { id: 'proj1', label: '04 | MAIN RACE' },
         { id: 'strategy', label: '05 | RACE STRATEGY' },
         { id: 'visual', label: '06 | VISUAL KIT' },
-        { id: 'live', label: '07 | LIVE RUN' },
-        { id: 'logic', label: '08 | EXPERIENCE FLOW' },
-        { id: 'proj2_1', label: '09 | SUB RACE #1' },
-        { id: 'proj2_2', label: '10 | SUB RACE #2' },
-        { id: 'finish', label: '11 | FINISH LINE' }
-    ];
+        { id: 'logic', label: '07 | EXPERIENCE FLOW' },
+        { id: 'proj2', label: '08 | SUB RACE' },
+        { id: 'profile', label: '09 | RACE INFO CENTRE' },
+        { id: 'finish', label: '10 | FINISH LINE' }
+        ];
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -42,7 +41,7 @@ const Nav = ({ isMenuOpen }: NavProps) => {
             { threshold: 0.5 } // 섹션이 절반 이상 보일 때 변경
         );
 
-        const sectionElements = document.querySelectorAll('[data-theme], #start, #slogan, #profile, #proj1, #strategy, #visual, #logic, #live, #proj2_1, #proj2_2, #finish');
+        const sectionElements = document.querySelectorAll('[data-theme], #start, #slogan, #live, #proj1, #strategy, #visual, #logic, #proj2, #profile, #finish');
         sectionElements.forEach((el) => observer.observe(el));
 
         return () => observer.disconnect();

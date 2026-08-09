@@ -1,71 +1,225 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './Main_7.css';
 
-interface DirectoryRunButtonProps {
-  url: string;
+interface LocaleContent {
+  subTitle: string;
+  logics: string[];
 }
 
-const Main_7: React.FC<DirectoryRunButtonProps> = ({ url }) => {
-  const [isRunning, setIsRunning] = useState(false);
-  const [runtime, setRuntime] = useState('00:00:00');
-  const timerRef = useRef<number | null>(null);
+interface TrackContent {
+  id: string;
+  trackNum: string;
+  menuTitle: string;
+  ko: LocaleContent;
+  en: LocaleContent;
+  videoSrc: string; 
+}
 
-  const handleRun = () => {
-    if (isRunning) return;
+const TRACK_DATA: TrackContent[] = [
+  {
+    id: 'track01',
+    trackNum: 'TRACK 01',
+    menuTitle: 'MAIN',
+    videoSrc: '/media/pf_1.mp4', 
+    ko: {
+      subTitle: 'Curation Introduction',
+      logics: [
+        '퍼즐 요소를 통한 사용자 참여 유도',
+        '촉각적 조각 맞춤을 통한 상호작용형 CTA 설계',
+        '선택적 매칭을 통한 개인 맞춤형 콘텐츠 탐색 과정'
+      ]
+    },
+    en: {
+      subTitle: 'Curation Introduction',
+      logics: [
+        'Puzzle-driven User Engagement',
+        'Interactive CTA via Tactile Piece Matching',
+        'Personalised Discovery Through Selective Matching'
+      ]
+    }
+  },
+  {
+    id: 'track02',
+    trackNum: 'TRACK 02',
+    menuTitle: 'CURATION',
+    videoSrc: '/media/pf_2.mp4',
+    ko: {
+      subTitle: 'Emblem',
+      logics: [
+        '영화적 상징물을 보관하는 상호작용형 금고',
+        '클릭으로 구동되는 서랍형 구조 설계',
+        '숨겨진 오브제를 통한 호기심 자극형 능동적 탐색 경험 유도'
+      ]
+    },
+    en: {
+      subTitle: 'Emblem',
+      logics: [
+        'Interactive Vault for Cinematic Symbols',
+        'Click-to-Open Drawer Mechanism',
+        'Curiosity-Driven Exploration Through Hidden Objects'
+      ]
+    }
+  },
+  {
+    id: 'track03',
+    trackNum: 'TRACK 03',
+    menuTitle: 'EXPLORE',
+    videoSrc: '/media/pf_3.mp4',
+    ko: {
+      subTitle: 'Exhibition',
+      logics: [
+        '월별 테마 중심의 컨셉 탐해 구조',
+        '시각적 압도감을 극대화하는 전체 화면 전시 레이아웃',
+        '서사적 몰입을 위한 컨셉형 프레임워크 설계'
+      ]
+    },
+    en: {
+      subTitle: 'Exhibition',
+      logics: [
+        'Monthly Themed Concept Exploration',
+        'Full-Screen Exhibition Layout',
+        'Concept-First Framing for Narrative Immersion'
+      ]
+    }
+  },
+  {
+    id: 'track04',
+    trackNum: 'TRACK 04',
+    menuTitle: 'FUNDING',
+    videoSrc: '/media/pf_4.mp4',
+    ko: {
+      subTitle: '#TAKE01',
+      logics: [
+        '클래퍼보드 컨셉의 스크롤 잠금 트랩 구현',
+        '커스텀 커서 카운트다운 및 액션 트리거 설계',
+        '영화적 상호작용을 통한 이용자 참여형 UI 유도'
+      ]
+    },
+    en: {
+      subTitle: 'TAKE #01',
+      logics: [
+        'Clapper Board Concept / Scroll-Lock Trap',
+        'Custom Cursor Countdown & Action Trigger',
+        'User Participation Through Cinematic Interaction'
+      ]
+    }
+  },
+  {
+    id: 'track05',
+    trackNum: 'TRACK 05',
+    menuTitle: 'MY SPACE',
+    videoSrc: '/media/pf_5.mp4', 
+    ko: {
+      subTitle: 'Personal Directory',
+      logics: [
+        '이케아 효과(IKEA Effect)를 적용한 능동적 타임라인 탐색 및 데이터 소유감 부여',
+        '달력형 그래픽 UI를 통한 과거 기록 발굴 및 플랫폼 체류 시간 극대화',
+        '개인화된 넘버링·별점 시스템과 SNS 공유 메커니즘을 통한 자발적 바이럴 유도'
+      ]
+    },
+    en: {
+      subTitle: 'My Space Archive',
+      logics: [
+        'IKEA Effect-Driven Active Timeline Exploration and Data Ownership',
+        'Maximised Retention via Calendar-Based Graphic Interface for Historic Records',
+        'Organic Word-of-Mouth via Custom Numbering, Star Ratings, and Social Sharing'
+      ]
+    }
+  }
+];
 
-    setIsRunning(true);
-    const startTime = Date.now();
+const Main_7: React.FC = () => {
+  const [lang, setLang] = useState<'KOR' | 'ENG'>('ENG');
+  const [activeTab, setActiveTab] = useState<number>(0);
 
-    timerRef.current = window.setInterval(() => {
-      const now = Date.now();
-      const diff = now - startTime;
-      
-      const ms = Math.floor((diff % 1000) / 10).toString().padStart(2, '0');
-      const sec = Math.floor((diff / 1000) % 60).toString().padStart(2, '0');
-      const min = Math.floor((diff / (1000 * 60)) % 60).toString().padStart(2, '0');
-      
-      setRuntime(`${min}:${sec}:${ms}`);
-    }, 10);
-
-    // 2.8초 후 새창 이동 및 리셋
-    setTimeout(() => {
-      if (timerRef.current) {
-        window.clearInterval(timerRef.current);
-      }
-      window.open(url, '_blank', 'noopener,noreferrer');
-      setIsRunning(false);
-      setRuntime('00:00:00');
-    }, 3000);
-  };
+  const currentTrack = TRACK_DATA[activeTab];
+  const currentLocale = lang === 'KOR' ? currentTrack.ko : currentTrack.en;
 
   return (
-    <div className="main7_section" data-theme="light">
-      <div className="main7_track_container" onClick={handleRun}>
+    <section className="main7_container" data-theme="light">
+      
+      {/* 트랙 인디케이터 배너 */}
+      <div className="main7_top">
+        <div className="main7_flow_set">
+          <span className="main7_title">EXPERIENCE FLOW</span>
+          
+          {/* num 배치를 빼고 상단 우측으로 들어온 다국어 스위치 */}
+          <div className="main7_top_lang_toggle">
+            <button
+              type="button"
+              className={`main7_top_lang_btn ${lang === 'ENG' ? 'is_active' : ''}`}
+              onClick={() => setLang('ENG')}
+            >
+              ENG
+            </button>
+            <span className="main7_top_lang_divider">/</span>
+            <button
+              type="button"
+              className={`main7_top_lang_btn ${lang === 'KOR' ? 'is_active' : ''}`}
+              onClick={() => setLang('KOR')}
+            >
+              KOR
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* [하단] 메인 레이아웃 */}
+      <div className="main7_main_layout">
         
-        <div className="main7_row_1">
-          <h1 className="main7_title">
-            <span className={`main7_text ${isRunning ? 'is_blinking' : ''}`}>
-              PROJECT {isRunning ? 'RUNNING ···' : ':: RUN'}
-            </span>
-          </h1>
+        <div className="main7_side">
+          <div className="main7_menu_list">
+            {TRACK_DATA.map((track, index) => {
+              const isActive = index === activeTab;
+              return (
+                <button
+                  key={track.id}
+                  type="button"
+                  className={`main7_menu_btn ${isActive ? 'is_active' : 'is_inactive'}`}
+                  onClick={() => setActiveTab(index)}
+                >
+                  <span className="main7_btn_title">{track.menuTitle}</span>
+                </button>
+              );
+            })}
+          </div>
         </div>
 
-        <div className="main7_row_2">
-          <div className="main7_meta_block runtime_block">
-            <p className="main7_meta_label">RUNTIME<span className="main7_meta_value timer_font">{runtime}</span></p>
+        <div className="main7_content_zone">
+          
+          <div className="main7_video_viewport">
+            <div className="main7_mockup_body">
+              <span className="main7_sub">{currentLocale.subTitle}</span>
+              <video
+                key={`${currentTrack.id}_${lang}`} 
+                src={currentTrack.videoSrc}
+                className="main7_screen_video"
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
+            </div>
           </div>
-          <h1 className="main7_project_name">DIRECTORY.M</h1>
-        </div>
 
-        <div className="main7_row_3">
-          <div className="main7_meta_block distance_block">
-            <span className="main7_meta_label">DISTANCE : FULL COURSE</span>
-            <span className="main7_meta_value">BIB NO. P-01</span>
+          <div className="main7_logic_area">
+            <div className="main7_logic_list">
+              {currentLocale.logics.map((text, idx) => (
+                <p 
+                  key={`${idx}_${lang}`} 
+                  className="main7_logic_item" 
+                  style={{ animationDelay: `${idx * 0.1}s` }}
+                >
+                  {text}
+                </p>
+              ))}
+            </div>
           </div>
+
         </div>
 
       </div>
-    </div>
+    </section>
   );
 };
 

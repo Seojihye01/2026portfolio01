@@ -4,7 +4,6 @@ import "./App.css";
 
 // 기존 컴포넌트들
 import Main from './components/Main';
-import TopButton from "./components/TopBtn";
 import Navigation from "./components/Nav"; 
 
 function App() {
@@ -30,7 +29,7 @@ function App() {
 
   return (
     <>
-      {/* 진행 상태 바 (기존 유지) */}
+      {/* 진행 상태 바 */}
       <div className="progress_container">
         <div style={{
           position: 'fixed', top: 0, left: 0, width: `${scrollWidth}%`, height: '4px',
@@ -40,7 +39,6 @@ function App() {
       
       {isMainPage && <Navigation />}
       
-      <TopButton />
       
       <Routes>
         <Route path="/" element={<Main />} />

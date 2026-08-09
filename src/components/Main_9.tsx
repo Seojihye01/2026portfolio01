@@ -1,103 +1,95 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Main_9.css';
 
+type CheckpointStep = 0 | 1 | 2 | 3 | 4;
+
 const Main_9: React.FC = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [currentStep, setCurrentStep] = useState<CheckpointStep>(0);
 
-  useEffect(() => {
-      if (videoRef.current) {
-        videoRef.current.play().catch((error) => {
-          console.log("Muted autoplay initiated:", error);
-          if (videoRef.current) {
-            videoRef.current.muted = true;
-            videoRef.current.play();
-          }
-        });
-      }
-    }, []);
-  
   return (
-    <article className="main9_container" data-theme="light">
-      <div className='main9_inner'>
-      <header className="main9_sub_header">
-        <div className="main9_sub_left">
-          <span className="main9_sub_label">Distance : Half Course</span>
-          <div className='main9_sub_set'>
-            <p className="main9_sub_tag bold">Personal Project, 100%</p>
-          </div>
-        </div>
-        <div className="main9_title_section">
-          <h1 className="main9_main_title">FRUIT CAMP</h1>
-        </div>
-      </header>
-      <p className="main9_sub_tag">Web Publishing / UX UI Design / Branding</p>
-      <span className="main9_sub_meta">Duration : 1D (25.12)</span>
-
-      <div className="main9_sub_right">
-        <span className="main9_sub_meta text_bold">BIB NO. P-02</span>
-      </div>
-
-      <div className="main9_hero_visual_bar">
-        <div className="main9_video_container">
-          <video
-            ref={videoRef}
-            className="main9_background_video" src="/media/mini_proj.mp4" autoPlay muted loop playsInline />
-        </div>
-      </div>
-
-      <hr className="main9_section_divider" />
-
-      <div className="main9_spec_sheet">
+  <section className="main9_container" data-theme="light">
+    <div className="main9_top_wrapper">
+      <div className="main9_track_sidebar">
+        <div className="main9_track_header">[ COURSE MAP ]</div>
         
-        <div className="main9_spec_row">
-          <div className="main9_spec_label">System Core</div>
-          <div className="main9_spec_value">
-            <p className="main9_value_line text_right">HTML5 / JavaScript / CSS / Illustrator / Gemini / Chat GPT</p>
+        <div className="main9_timeline_wrapper">
+          <svg className="timeline_line_svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+            <polyline points="10,35 45,5 65,35 90,5" fill="none" stroke="rgba(249, 249, 249, 0.15)" strokeWidth="0.8" />
+            {currentStep >= 2 && <polyline className="fade_in_line" points="10,35 45,5" fill="none" stroke="rgba(249, 249, 249, 0.8)" strokeWidth="0.8" />}
+            {currentStep >= 3 && <polyline className="fade_in_line" points="45,5 65,35" fill="none" stroke="rgba(249, 249, 249, 0.8)" strokeWidth="0.8" />}
+            {currentStep >= 4 && <polyline className="fade_in_line" points="65,35 90,5" fill="none" stroke="rgba(249, 249, 249, 0.8)" strokeWidth="0.8" />}
+          </svg>
+
+          <div className={`main9_track_node start_node ${currentStep >= 1 ? 'active' : ''} ${currentStep === 0 ? 'cta_blink' : ''}`} onClick={() => setCurrentStep(1)}>
+            <span className="node_dot"></span>
+            <span className="node_label">START</span>
+          </div>
+
+          <div className={`main9_track_node cp1_node ${currentStep >= 2 ? 'active' : ''} ${currentStep === 1 ? 'cta_blink' : ''}`} onClick={() => setCurrentStep(2)}>
+            <span className="node_dot"></span>
+            <span className="node_label">CP 01</span>
+          </div>
+
+          <div className={`main9_track_node cp2_node ${currentStep >= 3 ? 'active' : ''} ${currentStep === 2 ? 'cta_blink' : ''}`} onClick={() => setCurrentStep(3)}>
+            <span className="node_dot"></span>
+            <span className="node_label">CP 02</span>
+          </div>
+
+          <div className={`main9_track_node finish_node ${currentStep >= 4 ? 'active' : ''} ${currentStep === 3 ? 'cta_blink' : ''}`} onClick={() => setCurrentStep(4)}>
+            <span className="node_dot"></span>
+            <span className="node_label">FINISH</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className={`main9_bottom_wrapper ${currentStep === 0 ? 'initial_hidden' : ''}`}>
+      <div className="race_content_sheet">
+        
+        <div className={`main9_sheet_header step_block ${currentStep >= 1 ? 'active' : ''}`}>
+          <div className="main9_meta_item">
+            <span className="main9_meta_title">RACE TITLE</span>
+            <span className="main9_meta_value bold">WEB DESIGNER</span>
+          </div>
+          <div className="main9_text_right">
+            <span className="main9_meta_value code_font">PROJ NO. 01 - 2026</span>
           </div>
         </div>
 
-        <div className="main9_spec_row m_top_large">
-          <div className="main9_spec_label">Identity</div>
-          <div className="main9_spec_value">
-            <p className="main9_value_line text_right text_medium">Conceptual Fruit Sales Platform</p>
-            <p className="main9_value_line text_right spacing_wide color_muted">Colourful / Kitsch / Retro / Y2K / 80s Pop Art</p>
+        <div className="main9_sheet_body">
+          <div className={`step_block ${currentStep >= 2 ? 'active' : ''}`}>
+            <h1 className="main9_giant_title">SEO JIHYE</h1>
+            <h2 className="section_sub_title">RUNNER 01</h2>
           </div>
-        </div>
 
-        <div className="main9_spec_row m_top_large">
-          <div className="main9_spec_label">Mission</div>
-          <div className="main9_spec_value">
-            <p className="main9_value_line text_right text_medium">Targeting Z generation with a kitsch military universe</p>
-          </div>
-        </div>
-
-        <div className="main9_spec_row m_top_large">
-          <div className="main9_spec_label">Visual kit spec</div>
-          <div className="main9_spec_value pack_gap_control">
-            
-            <div className='main9_value_set'>
-              <span className="main9_pack_title">[ FONT ]</span>
-              <p className="main9_pack_text text_medium">POPPIN, MONTSERRAT</p>
+          <div className={`step_block ${currentStep >= 3 ? 'active' : ''}`}>
+            <h3 className="main9_section_label">RUNNING GEAR</h3>
+            <div className="main9_content_list">
+              <p className="main9_content_item">HTML5 / CSS3 / REACT / TYPESCRIPT / JAVASCRIPT / FRAMER MOTION</p>
+              <p className="main9_content_item">FIGMA / PHOTOSHOP / ILLUSTRATOR / AFTER EFFECTS / PREMIERE PRO</p>
+              <p className="main9_content_item">VISUAL STORYTELLING / BRANDING / INFORMATION ARCHITECTURE</p>
             </div>
-            
-            <div className="main9_palette_wrapper">
-              <span className="main9_pack_title">[ COLOUR PALETTE ]</span>
-              <div className="main9_color_group">
-                <span className="main9_color_badge bg_red text_light">#ED1C24</span>
-                <span className="main9_color_badge bg_lime text_dark">#C9FF2F</span>
-                <span className="main9_color_badge bg_orange text_dark">#FF985A</span>
-                <span className="main9_color_badge bg_purple text_light">#8165FF</span>
-                <span className="main9_color_badge bg_cream text_dark">#F3F3F3</span>
-                <span className="main9_color_badge bg_black text_light">#1B1B1B</span>
+          </div>
+
+          <div className={`step_block ${currentStep >= 4 ? 'active' : ''}`}>
+            <h3 className="main9_section_label">TIME & RECORD</h3>
+            <div className="main9_record_group">
+              <div className="main9_record_row">
+                <h4 className="main9_record_title">TECH UNIVERSITY OF KOREA / BACHELOR'S DEGREE</h4>
+                <p className="main9_record_sub">MAR 2013 - FEB 2018 · BUSINESS ADMINISTRATION & INFORMATION TECHNOLOGY</p>
+              </div>
+              <div className="main9_record_row">
+                <h4 className="main9_record_title">MBC COMPUTER ACADEMY</h4>
+                <p className="main9_record_sub">JUL 2025 - MAR 2026</p>
               </div>
             </div>
-
           </div>
         </div>
 
       </div>
-      </div>
-    </article>
+    </div>
+
+  </section>
   );
 };
 

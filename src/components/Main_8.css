@@ -1,106 +1,137 @@
-.main8_container {width: 100%; min-height: 100vh; background: #f1f1f1; overflow: hidden; color: #121212;
-                  position: relative; display: flex; flex-direction: column;}
+.main8_container {width: 100%; max-width: 1100px; height: 100vh; margin: 0 auto; padding: 30px 80px; 
+                  background-color: #f9f9f9; color: #121212; box-sizing: border-box; display: flex; justify-content: center;}
 
-.main8_top {width: 100%; height: 120px; background: #121212; color: #f9f9f9; display: flex;
-            justify-content: center; align-items: center; padding: 10px 0;}
+.main8_inner {width: 100%; max-width: 1100px;}
 
-.main8_flow_set {display: flex; justify-content: space-between; width: 100%; max-width: 1200px; 
-                 padding: 0 40px; align-items: center; box-sizing: border-box;}
+.main8_sub_header {display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 5px;}
 
-.main8_title {font-size: 32px; letter-spacing: 0.02em; font-weight: 700;}
+.main8_sub_left {display: flex; flex-direction: column; align-items: start; gap: 16px;}
 
-.main8_top_lang_toggle {display: flex; gap: 8px; font-size: 15px; letter-spacing: 0.05em; font-weight: 600;}
+.main8_sub_label {font-size: 17px; line-height: 1;}
 
-.main8_top_lang_btn {background: transparent; border: none; color: rgba(249, 249, 249, 0.3); cursor: pointer;
-                     padding: 0; font-weight: 600; transition: color 0.2s ease;}
+.main8_sub_tag {font-size: 11px; font-weight: 300; color: #888; line-height: 2;}
 
-.main8_top_lang_btn.is_active {color: #f9f9f9;}
+.main8_sub_tag.bold {font-weight: 500;}
 
-.main8_top_lang_divider {color: rgba(249, 249, 249, 0.2);}
+.main8_main_title {font-size: 32px; font-weight: 700; letter-spacing: 1px; line-height: 1;}
 
-.main8_main_layout {display: flex; flex: 1; width: 100%; max-width: 1200px; margin: 0 auto; box-sizing: border-box;}
+.main8_sub_right {display: flex; flex-direction: column; align-items: flex-end; gap: 10px; text-align: right;}
 
-.main8_side {width: 250px; padding: 40px; border-right: 1px solid rgba(18, 18, 18, 0.1); box-sizing: border-box;}
-             
-.main8_menu_list {display: flex; flex-direction: column; gap: 14px;}
+.main8_sub_meta {font-size: 12.5px; color: #666; line-height: 1;}
 
-.main8_menu_btn {display: flex; align-items: center; width: 100%; background: transparent; border: none;
-                 padding: 14px 16px; justify-content: center; cursor: pointer; border-radius: 6px;
-                 transition: all 0.25s ease;}
+.main8_sub_right a {text-decoration: underline; text-underline-offset: 3px; font-size: 10px; 
+                    color: #333; transition: color 0.2s ease;}
 
-.main8_btn_title {font-size: 13px; letter-spacing: 0.5px; font-weight: 500;}
+.main8_sub_right a:hover {color: #999;}
 
-.main8_menu_btn.is_active {background: rgba(18, 18, 18, 0.06);}
+.text_bold {font-size: 15px; font-weight: 500;}
 
-.main8_menu_btn.is_active .main8_btn_title {font-weight: 700; color: #121212;}
+.main8_hero_visual_bar {width: 100%; height: 160px; background: #000; margin: 15px 0 35px 0; display: flex; 
+                        justify-content: center; align-items: center; position: relative; overflow: hidden;
+                        box-shadow: 0 10px 30px rgba(18, 18, 18, 0.08);}
 
-.main8_menu_btn.is_inactive .main8_btn_title {color: rgba(18, 18, 18, 0.35);}
+.main8_img_container {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;}
 
-.main8_content_zone {flex: 1; display: flex; flex-direction: column; padding: 30px 80px; gap: 40px; 
-                     box-sizing: border-box;}
+.main8_img_container img {width: 100%; height: 100%; object-fit: cover; object-position: center center; 
+                          display: block; transform: scale(0.4) translateY(145px);}
 
-.main8_video_viewport {width: 100%; display: flex; justify-content: center; align-items: center;}
+.main8_section_divider {border: none; border-top: 1px solid rgba(18, 18, 18, 0.15); margin-bottom: 45px;}
 
-.main8_mockup_body {width: 100%; max-width: 700px; aspect-ratio: 16 / 9; background: #e5e5e5; 
-                    overflow: hidden; position: relative; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);}
+.main8_spec_sheet {width: 100%; display: flex; flex-direction: column; gap: 12px;}
 
-.main8_sub {font-size: 12px; letter-spacing: 1px; font-weight: 300;}
+.main8_spec_row {display: flex; justify-content: space-between; align-items: flex-start; width: 100%;
+                 border-bottom: 1px dashed rgba(18, 18, 18, 0.1); padding-bottom: 10px;}
 
-.main8_screen_video {width: 100%; height: 100%; object-fit: cover; animation: main8_img_fade 0.6s ease-out forwards;}
+.main8_spec_label {width: 200px; font-size: 14px; font-weight: 500; line-height: 1.5; text-transform: uppercase;}
 
-.main8_logic_area {width: 100%; max-width: 700px; margin: 0 auto;}
+.main8_spec_value {flex: 1; display: flex; flex-direction: column; align-items: flex-end;}
 
-.main8_logic_list {display: flex; flex-direction: column; gap: 12px;}
+.main8_value_line {font-size: 14px; font-weight: 400; color: #333; line-height: 2; text-align: right; width: 75%;}
 
-.main8_logic_item {font-size: 14px; font-weight: 400; line-height: 1.6; margin: 0; color: #222222; word-break: keep-all;
-                   opacity: 0; transform: translateY(10px); animation: main8_fade_slide 0.5s ease forwards;}
+.main8_value_line.text_small {font-size: 12.5px; line-height: 2;}
 
-@keyframes main8_fade_slide { to { opacity: 1; transform: translateY(0); } }
+.main8_value_line.text_medium {line-height: 2;}
 
-@keyframes main8_img_fade { from { opacity: 0; filter: blur(4px); } to { opacity: 1; filter: blur(0); } }
+.pack_gap_control {display: flex; flex-direction: column; gap: 12px; width: 100%;}
+
+.main8_value_set {display: flex; flex-direction: row; justify-content: flex-end;  align-items: center; gap: 16px;
+                  width: 100%;}
+
+.main8_pack_title {font-size: 12.5px; color: #777; font-weight: 400; white-space: nowrap;}
+
+.main8_pack_text {font-size: 14px; font-weight: 400; color: #333; text-align: right; margin: 0; line-height: 1.5;}
+
+.color_dark {font-size: 12.5px; color: #777; font-weight: 400;}
+
+.color_muted {color: #777;}
+
+.spacing_wide {letter-spacing: 0.05em;}
+
+.m_top_large {margin-top: 10px;}
 
 /* Responsive Design */
 /* 1. 태블릿(1024px 이하) */
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
 
-  .main8_top {height: 60px;}
+  .main8_container {padding: 20px 50px;}
 
-  .main8_flow_set {padding: 0 100px;}
+  .main8_main_title {font-size: 28px;}
 
-  .main8_title {font-size: 20px;}
-
-  .main8_main_layout {flex-direction: column; padding: 0 50px;}
-
-  .main8_side {width: 100%; border-right: none; border-bottom: 1px solid rgba(18, 18, 18, 0.1); 
-               padding: 10px 0;}
-
-  .main8_menu_list {gap: 2px;}
-
-  .main8_menu_btn {padding: 10px 12px;}
-
-  .main8_content_zone {padding: 30px 40px; gap: 24px;}
-
-  .main8_mockup_body {max-width: 100%;}
-
-  .main8_logic_area {max-width: 100%;}
+  .main8_value_line {width: 104%;}
 
 }
 
 /* 2. 모바일(768px 이하) */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
-  .main8_flow_set {padding: 0 53px;}
+  .main8_container {padding: 18px 40px;}
 
-  .main8_title {font-size: 16px;}
+  .main8_sub_header {display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; 
+                     gap: 16px; padding-bottom: 10px; width: 100%;}
+                     
+  .main8_sub_left {gap: 10px; flex: 1;}
 
-  .main8_top_lang_toggle {font-size: 13px;}
+  .main8_sub_label {font-size: 11px; line-height: 1;}
 
-  .main8_side {padding: 20px 0;}
+  .main8_sub_tag {font-size: 10px; line-height: 1; margin-top: 1;}
 
-  .main8_content_zone {padding: 20px 30px; gap: 20px;}
+  .title_section {text-align: right;}
 
-  .main8_mockup_body {max-width: 100%;}
+  .main8_main_title {font-size: 16px; letter-spacing: 0.02em; line-height: 1.1;}
 
-  .main8_logic_area {max-width: 100%;}
+  .main8_sub_right {display: flex; flex-direction: row; justify-content: space-between; align-items: center;
+                    width: 100%; margin: 8px 0 20px; border-top: 1px dashed rgba(18, 18, 18, 0.1); 
+                    padding-top: 8px;}
+
+  .main8_sub_meta {font-size: 9.5px; line-height: 2;}
+
+  .text_bold {font-size: 11.5px;}
+
+  .main8_sub_right a {font-size: 9px; white-space: nowrap;}
+
+  .main8_hero_visual_bar {height: 120px; margin: 10px 0 24px 0;}
+
+  .main8_img_container img {transform: scale(0.4) translateY(105px);}
+
+  .main8_section_divider {margin-bottom: 24px;}
+
+  .main8_spec_sheet {gap: 10px;}
+
+  .main8_spec_row {flex-direction: column; align-items: flex-start; gap: 8px; border: none;}
+
+  .main8_spec_label {width: 100%; font-size: 10px; color: #888; border-bottom: 1px dashed rgba(18, 18, 18, 0.1);
+                      padding-bottom: 4px;}
+
+  .main8_spec_value {width: 100%; align-items: flex-start;}
+
+  .main8_value_line {font-size: 11px; line-height: 1.7; width: 100%;}
+  
+  .m_top_large {margin-top: 0;}
+
+  .main8_value_set {flex-direction: column; align-items: flex-end; gap: 4px;}
+
+  .main8_pack_title {font-size: 10px;}
+
+  .main8_pack_text {text-align: left; font-size: 11px; line-height: 1.7;}
 
 }

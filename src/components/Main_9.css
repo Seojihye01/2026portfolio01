@@ -1,161 +1,133 @@
-.main9_container {width: 100%; height: 100vh; margin: 0 auto; padding: 20px 80px; background-color: #f9f9f9; 
-                  color: #121212; box-sizing: border-box; display: flex; justify-content: center; margin: 50px 0;}
+.main9_container {width: 100%; min-height: 100vh; background-color: #E5E5E7; display: flex;
+                  justify-content: center; align-items: center; flex-direction: column;}
 
-.main9_inner {width: 100%; max-width: 1100px;}
+.main9_top_wrapper {width: 100%; background-color: #121212; align-items: center;}
 
-.main9_sub_header {display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 5px;}
+.main9_track_sidebar {width: 100%; max-width: 1200px; height: 140px; background-color: #121212; margin: 0 auto;
+                      color: rgba(249, 249, 249, 0.8); padding: 24px 0; display: flex; flex-direction: column;}
 
-.main9_sub_left {display: flex; flex-direction: column; align-items: start; gap: 16px;}
+.main9_track_header {font-size: 13px; letter-spacing: 0.1em; font-weight: 400; margin-bottom: 15px; margin-left: 68px;}
 
-.main9_sub_label {font-size: 17px; line-height: 1;}
+.main9_timeline_wrapper {flex: 1; position: relative; width: 100%; margin-left: 40px;}
 
-.main9_sub_tag {font-size: 11px; font-weight: 300; color: #888; line-height: 2;}
+.timeline_line_svg {position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;}
 
-.main9_sub_tag.bold {font-weight: 500;}
+.fade_in_line {animation: svgLineFade 0.4s ease forwards;}
 
-.main9_main_title {font-size: 32px; font-weight: 700; letter-spacing: 1px; line-height: 1;}
-
-.main9_sub_right {display: flex; flex-direction: column; align-items: flex-end; gap: 10px; text-align: right;}
-
-.main9_sub_meta {font-size: 12.5px; color: #666; line-height: 1;}
-
-.text_bold {font-size: 15px; font-weight: 500;}
-
-.main9_hero_visual_bar {width: 100%; height: 160px; background: #000; margin: 15px 0 35px 0; display: flex; 
-                        justify-content: center; align-items: center; position: relative; overflow: hidden;
-                        box-shadow: 0 10px 30px rgba(18, 18, 18, 0.08);}
-
-.main9_video_container {position: absolute; top: 0; left: 0; width: 100%; height: 110%; z-index: 1;
-                        transform: translateX(1px);}
-
-.main9_background_video {width: 100%; height: 100%; object-fit: cover; object-position: center center; 
-                         display: block; transform: scale(1.05);}
-
-.main9_section_divider {border: none; border-top: 1px solid rgba(18, 18, 18, 0.15); margin-bottom: 45px;}
-
-.main9_spec_sheet {width: 100%; display: flex; flex-direction: column; gap: 12px;}
-
-.main9_spec_row {display: flex; justify-content: space-between; align-items: flex-start; width: 100%;
-                 border-bottom: 1px dashed rgba(18, 18, 18, 0.1); padding-bottom: 10px;}
-
-.main9_spec_label {width: 200px; font-size: 14px; font-weight: 500; line-height: 1.5; text-transform: uppercase;}
-
-.main9_spec_value {flex: 1; display: flex; flex-direction: column; align-items: flex-end;}
-
-.main9_value_line {font-size: 14px; font-weight: 400; color: #333; line-height: 2; text-align: right; width: 75%;}
-
-.main9_value_line.text_small {font-size: 12.5px; line-height: 2;}
-
-.main9_value_line.text_medium {line-height: 2;}
-
-.pack_gap_control {display: flex; flex-direction: column; gap: 12px; width: 100%;}
-
-.main9_value_set {display: flex; flex-direction: row; justify-content: flex-end;  align-items: center; gap: 16px;
-                  width: 100%;}
-
-.main9_palette_wrapper {display: flex; flex-direction: row; justify-content: flex-end; align-items: center; 
-                        gap: 16px; margin-top: 4px; width: 100%;}
-
-.main9_pack_title {font-size: 12.5px; color: #777; font-weight: 400; white-space: nowrap;}
-
-.main9_pack_text {font-size: 14px; font-weight: 400; color: #333; text-align: right; margin: 0; line-height: 1.5;}
-
-.color_dark {font-size: 12.5px; color: #777; font-weight: 400;}
-
-.color_muted {color: #777;}
-
-.spacing_wide {letter-spacing: 0.05em;}
-
-.m_top_large {margin-top: 10px;}
-
-.main9_color_group {display: flex; gap: 4px; flex-wrap: wrap;}
-
-.main9_color_badge {font-size: 10px; letter-spacing: 0.02em; font-weight: 600; padding: 4px 6px; border-radius: 4px; 
-                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);}
-
-.bg_red {background-color: #ED1C24;}
-
-.bg_lime {background-color: #C9FF2F;}
-
-.bg_orange {background-color: #FF985A;}
-
-.bg_purple {background-color: #8165FF;}
-
-.bg_cream {background-color: #F3F3F3; border: 1px solid #E5E5E5;}
-
-.bg_black {background-color: #1B1B1B;}
-
-.text_light {color: #F3F3F3;}
-
-.text_dark {color: #1B1B1B;}
-
-/* Responsive Design */
-/* 1. 태블릿(1024px 이하) */
-@media screen and (max-width: 1024px) {
-
-  .main9_container {padding: 20px 50px;}
-
-  .main9_main_title {font-size: 28px;}
-
-  .main9_value_line {width: 104%;}
-
+@keyframes svgLineFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* 2. 모바일(768px 이하) */
-@media screen and (max-width: 768px) {
+.main9_track_node {position: absolute; cursor: pointer; display: flex; flex-direction: column; align-items: center;
+                   justify-content: center; transform: translate(-50%, -50%); z-index: 10;}
 
-  .main9_container {padding: 18px 40px;}
+.start_node {left: 9.8%; top: 87%;}
 
-  .main9_sub_header {display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; 
-                     gap: 16px; padding-bottom: 10px; width: 100%;}
-                     
-  .main9_sub_left {gap: 10px; flex: 1;}
+.cp1_node {left: 45.1%; top: 12%;}
 
-  .main9_sub_label {font-size: 11px; line-height: 1;}
+.cp2_node {left: 65%; top: 87%;}
 
-  .main9_sub_tag {font-size: 10px; line-height: 1; margin-top: 1;}
+.finish_node {left: 90.1%; top: 12%;}
 
-  .title_section {text-align: right;}
+.node_dot {width: 6px; height: 6px; background-color: rgba(249, 249, 249, 0.3); border-radius: 50%;
+           transition: all 0.3s ease;}
 
-  .main9_main_title {font-size: 16px; letter-spacing: 0.02em; line-height: 1.1;}
+.node_label {position: absolute; top: 14px; white-space: nowrap; font-size: 10px; letter-spacing: 0.05em; 
+             font-weight: 300; color: rgba(249, 249, 249, 0.4); transition: color 0.3s ease;}
 
-  .main9_sub_right {display: flex; flex-direction: row; justify-content: space-between; align-items: center;
-                    width: 100%; margin: 8px 0 20px; border-top: 1px dashed rgba(18, 18, 18, 0.1); 
-                    padding-top: 8px;}
+.main9_track_node.active .node_dot {background-color: rgba(249, 249, 249, 0.8); box-shadow: 0 0 4px #f9f9f9;}
 
-  .main9_sub_meta {font-size: 9.5px; line-height: 2;}
+.main9_track_node.active .node_label {color: rgba(249, 249, 249, 0.8);}
 
-  .text_bold {font-size: 11.5px;}
+.main9_track_node.cta_blink .node_dot {background-color: #f9f9f9; animation: ctaUrgentBlink 1.2s infinite ease-in-out;}
 
-  .main9_hero_visual_bar {height: 120px; margin: 10px 0 24px 0;}
+.main9_track_node.cta_blink .node_label {color: rgba(249, 249, 249, 0.8); font-weight: 300;}
 
-  .main9_section_divider {margin-bottom: 24px;}
+@keyframes ctaUrgentBlink {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); box-shadow: 0 0 6px #f9f9f9; }
+}
 
-  .main9_spec_sheet {gap: 10px;}
+.main9_bottom_wrapper {width: 100%; flex: 1; background-color: #E5E5E7; transition: opacity 0.3s ease;}
 
-  .main9_spec_row {flex-direction: column; align-items: flex-start; gap: 8px; border: none;}
+.main9_bottom_wrapper.initial_hidden {opacity: 0; pointer-events: none;}
 
-  .main9_spec_label {width: 100%; font-size: 10px; color: #888; border-bottom: 1px dashed rgba(18, 18, 18, 0.1);
-                     padding-bottom: 4px;}
+.race_content_sheet {width: 100%; max-width: 1200px; margin: 0 auto; padding: 50px 75px; display: flex; flex-direction: column; 
+                     transition: opacity 0.3s ease;}
 
-  .main9_spec_value {width: 100%; align-items: flex-start;}
+.main9_sheet_header {display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 15px;
+                     border-bottom: 1px solid rgba(18, 18, 18, 0.1); margin-bottom: 40px;}
 
-  .main9_value_line {font-size: 11px; line-height: 1.7; width: 100%;}
+.main9_meta_item {display: flex; flex-direction: row; align-items: flex-end; gap: 30px;}
+
+.main9_meta_title {font-size: 12px; color: #888; font-weight: 400; line-height: 1;}
+
+.main9_meta_value {font-size: 10px; color: #121212; line-height: 1;}
+
+.main9_meta_value.bold {font-size: 17px; font-weight: 700;}
+
+.main9_text_right {text-align: right; transform: translateY(1px);}
+
+.main9_sheet_body {display: flex; flex-direction: column; gap: 60px;}
+
+.step_block {opacity: 0; transform: translateY(6px);
+             transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);}
+
+.step_block.active {opacity: 1; transform: translateY(0);}
+
+.main9_giant_title {font-size: 50px; font-weight: 900; line-height: 1.1;}
+
+.section_sub_title {font-size: 14px; color: #888; margin: 6px 0 6px; font-weight: 400;}
+
+.main9_section_label {font-size: 11px; color: #888; margin-bottom: 12px; font-weight: 400; text-align: right;}
+
+.main9_content_list {display: flex; flex-direction: column; gap: 8px; text-align: right;}
+
+.main9_content_item {font-size: 15px; font-weight: 500; line-height: 1.4;}
+
+.main9_record_group {display: flex; flex-direction: column; gap: 24px; text-align: right;}
+
+.main9_record_title {font-size: 15px; font-weight: 500;}
+
+.main9_record_sub {font-size: 12px; color: #888; margin-top: 5px;}
+
+/* Responsive Design */
+/* 1. 모바일 (768px 이하) */
+@media (max-width: 768px) {
+
+  .main9_track_sidebar {padding: 20px; height: 120px;}
+
+  .main9_track_header {margin-left: 5px;}
+
+  .main9_timeline_wrapper {margin-left: 10px; margin-bottom: 15px;}
   
-  .m_top_large {margin-top: 0;}
+  .node_dot {width: 8px; height: 8px;}
 
-  .pack_gap_control {gap: 8px;}
+  .race_content_sheet {padding: 20px 45px;}
 
-  .main9_value_set {flex-direction: column; align-items: flex-end; gap: 4px;}
+  .main9_sheet_header {padding-bottom: 15px; margin-bottom: 20px;}
 
-  .main9_palette_wrapper {flex-direction: column; align-items: flex-end; gap: 6px;}
+  .main9_meta_item {display: flex; flex-direction: column; align-items: flex-start; gap: 10px;}
 
-  .main9_pack_title {font-size: 10px;}
+  .main9_meta_title {font-size: 9.5px; color: #888; font-weight: 400;}
 
-  .main9_pack_text {text-align: left; font-size: 11px; line-height: 1.7;}
+  .main9_meta_value {font-size: 8.5px; color: #121212;}
 
-  .main9_color_group {justify-content: flex-start; gap: 5px;}
+  .main9_meta_value.bold {font-size: 11px; font-weight: 700;}
+
+  .main9_sheet_body {gap: 30px;}
+
+  .main9_giant_title {font-size: 30px; font-weight: 900; line-height: 1.1;}
+
+  .section_sub_title {font-size: 12px; margin-bottom: 0px;}
+
+  .main9_section_label {font-size: 10.5px;}
+
+  .main9_content_item, .main9_record_title {font-size: 12px; line-height: 1.7;}
+
+  .main9_record_group {display: flex; flex-direction: column; gap: 24px;}
+
+  .main9_record_sub {font-size: 11px; color: #777; margin-top: 5px;}
   
-  .main9_color_badge {font-size: 7.5px; margin-top: 2px;}
-
 }
