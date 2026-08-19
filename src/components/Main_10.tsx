@@ -60,7 +60,7 @@ const Main_10: React.FC = () => {
             </div>
           </div>
 
-          <a href="https://github.com/Seojihye01/2026portfolio01" onClick={handleGithubClick} className="main11_contact_box link_box">
+          <a href="https://github.com/Seojihye01/2026portfolio01" onClick={handleGithubClick} className="main10_contact_box link_box">
             <span className="main10_frame_corner top_left">┌</span>
             <span className="main10_frame_corner top_right">┐</span>
             <span className="main10_frame_corner bottom_left">└</span>
