@@ -23,7 +23,7 @@ const Main_10: React.FC = () => {
 
     // 1초 후 새 탭으로 이동 및 텍스트 복구
     setTimeout(() => {
-      window.open("https://github.com/Seojihye01/", "_blank", "noopener,noreferrer");
+      window.open("https://github.com//", "_blank", "noopener,noreferrer");
       setGithubStatus('GIT HUB');
     }, 1000);
   };
@@ -42,7 +42,7 @@ const Main_10: React.FC = () => {
         </div>
 
         <div className="main10_centre">
-          <h1 className="main10_brand_name">SEO JIHYE</h1>
+          <h1 className="main10_brand_name">SE</h1>
         </div>
 
         <div className="main10_bottom_left">
@@ -56,7 +56,7 @@ const Main_10: React.FC = () => {
               <span className={`main10_contact_label ${emailStatus === 'COPY ✔' ? 'active_status' : ''}`}>
                 {emailStatus}
               </span>
-              <p className="main10_contact_value">jihyeseo0801@gmail.com</p>
+              <p className="main10_contact_value">1@gmail.com</p>
             </div>
           </div>
 
@@ -69,13 +69,13 @@ const Main_10: React.FC = () => {
               <span className={`main10_contact_label ${githubStatus === 'VISIT ✔' ? 'active_status' : ''}`}>
                 {githubStatus}
               </span>
-              <p className="main10_contact_value github_url">github.com/Seojihye01/</p>
+              <p className="main10_contact_value github_url">github.com//</p>
             </div>
           </a>
         </div>
 
         <div className="main10_bottom_right">
-          <p className="main10_credit_text">PORTFOLIO DESIGN <br />BY SEO JIHYE</p>
+          <p className="main10_credit_text">PORTFOLIO DESIGN <br />BY SE</p>
           <a href="https://www.figma.com/design/Ssy4u5CGgkodH9E9mo8XQm/2026_Portfolio01?node-id=0-1&t=yO1679EVzMayboML-1" target="_blank">MORE INFO ↗&#xFE0E;</a>
         </div>
 
