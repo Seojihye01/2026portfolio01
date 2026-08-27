@@ -58,7 +58,7 @@ const Main_9: React.FC = () => {
 
         <div className="main9_sheet_body">
           <div className={`step_block ${currentStep >= 2 ? 'active' : ''}`}>
-            <h1 className="main9_giant_title">SEO JIHYE</h1>
+            <h1 className="main9_giant_title">SE</h1>
             <h2 className="section_sub_title">RUNNER 01</h2>
           </div>
 
@@ -75,11 +75,11 @@ const Main_9: React.FC = () => {
             <h3 className="main9_section_label">TIME & RECORD</h3>
             <div className="main9_record_group">
               <div className="main9_record_row">
-                <h4 className="main9_record_title">TECH UNIVERSITY OF KOREA / BACHELOR'S DEGREE</h4>
+                <h4 className="main9_record_title">TECH UNIVERSITY / BACHELOR'S DEGREE</h4>
                 <p className="main9_record_sub">MAR 2013 - FEB 2018 · BUSINESS ADMINISTRATION & INFORMATION TECHNOLOGY</p>
               </div>
               <div className="main9_record_row">
-                <h4 className="main9_record_title">MBC COMPUTER ACADEMY</h4>
+                <h4 className="main9_record_title">COMPUTER ACADEMY</h4>
                 <p className="main9_record_sub">JUL 2025 - MAR 2026</p>
               </div>
             </div>
