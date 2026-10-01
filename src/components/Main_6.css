@@ -66,7 +66,7 @@
 
 .main6_colour_code {font-size: 10px; font-weight: 400; color: #777;}
 
-.main6_label_card:nth-child(2) .main6_colour_code {color: #999;}
+.main6_label_card:nth-child(2) .main6_colour_code {color: #E5E5E5;}
 
 .main6_vertical_text_zone {flex: 1; display: flex; flex-direction: column; align-items: end;
                            justify-content: flex-start; padding: 30px 0; writing-mode: vertical-lr; 
@@ -80,7 +80,7 @@
 
 .main6_label_card:nth-child(2) .main6_colour_name {color: #F9F9F9;}
 
-.main6_label_card:nth-child(3) .main6_colour_name {color: #999;}
+.main6_label_card:nth-child(3) .main6_colour_name {color: #CCC;}
 
 .colour_blue {color: #1090BF;}
 
@@ -174,7 +174,9 @@
   .main6_lane_wrapper {width: 100%; flex-direction: column; gap: 6px;}
 
   .main6_label_card {width: 100%; height: 62px; flex-direction: row; justify-content: space-between; 
-                     align-items: center; padding: 0 6px; align-items: center;}
+                     align-items: center; padding: 0 6px; align-items: center; box-sizing: border-box;}
+
+  .main6_label_card:nth-child(1) .main6_vertical_text_zone {padding: 10px;}
 
   .main6_chip_box {flex-direction: row; align-items: center; gap: 0px;}
 
@@ -183,7 +185,7 @@
   .main6_colour_code {font-size: 9.5px; margin: 0; transform: rotate(-90deg) translateY(-10px);}
 
   .main6_vertical_text_zone {flex: 1; padding: 0; margin-top: 0; margin-left: 10px; writing-mode: horizontal-tb;
-                             transform: rotate(0deg); align-items: first baseline;}
+                             transform: rotate(0deg); align-items: flex-start;}
 
   .main6_colour_name {font-size: 16px; letter-spacing: 0.04em;}
 
