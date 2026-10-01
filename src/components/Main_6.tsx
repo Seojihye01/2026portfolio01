@@ -5,8 +5,8 @@ const Main_6: React.FC = () => {
   const colors = [
     { code: '#121212', char: 'Cinematic Contrast', name: 'GRAPHITE', className: 'main6_bg_graphite' },
     { code: '#F4F4F4', char: 'Cinematic Contrast', name: 'CLOUD WHITE', className: 'main6_bg_white' },
-    { code: '#999999', char: 'Neutral Balance', name: 'PLATINUM GREY', className: 'main6_bg_grey' },
-    { code: '#1090BF', char: 'Visual Anchor', name: 'OCEAN BLUE', className: 'main6_bg_blue' },
+    { code: '#E5E5E5', char: 'Neutral Balance', name: 'PLATINUM GREY', className: 'main6_bg_grey' },
+    { code: '#1090BF', char: 'Visual Anchor', name: 'VIVID CERULEAN', className: 'main6_bg_blue' },
   ];
 
   const weights = ['light', 'regular', 'medium', 'semibold', 'bold', 'extrabold', 'black'];
